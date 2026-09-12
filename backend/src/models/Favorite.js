@@ -6,6 +6,7 @@ const FavoriteSchema = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: 'User',
       required: true,
+      index: true,
     },
     product: {
       type: mongoose.Schema.Types.ObjectId,
@@ -15,6 +16,8 @@ const FavoriteSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
+
+FavoriteSchema.index({ user: 1, product: 1 }, { unique: true });
 
 const Favorite = mongoose.model('Favorite', FavoriteSchema);
 

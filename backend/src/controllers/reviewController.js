@@ -1,67 +1,56 @@
+import { z } from 'zod';
 import Review from '../models/Review.js';
-import mongoose from 'mongoose';
+import Product from '../models/Product.js';
+import ApiError from '../utils/ApiError.js';
+import { asyncHandler } from '../utils/asyncHandler.js';
 
-// add review
-export async function addReview(req, res) {
-  const userId = req.user._id;
+export const reviewSchema = z.object({
+  productId: z.string().regex(/^[0-9a-fA-F]{24}$/, 'Invalid product id'),
+  comment: z.string().trim().min(3, 'Comment is too short').max(1000),
+  rating: z.coerce.number().int().min(1).max(5),
+});
+
+export const addReview = asyncHandler(async (req, res) => {
   const { productId, comment, rating } = req.body;
-  try {
-    if (!mongoose.isValidObjectId(productId)) {
-      return res.status(400).json({ message: 'Invalid product Id' });
-    }
-    const existingReview = await Review.findOne({
-      user: userId,
-      product: productId,
-    });
-    if (existingReview) {
-      return res
-        .status(400)
-        .json({ message: 'You alredy reviewd this product' });
-    }
-    const review = new Review({
-      product: productId,
-      user: userId,
-      comment,
-      rating,
-    });
-    await review.save();
-    res.status(201).json(review);
-  } catch (error) {
-    res.status(500).json({ message: 'Server Error', error: error.message });
-  }
-}
 
-// get review for product
-export async function getReviewsForProduct(req, res) {
-  const { productId } = req.params;
-  try {
-    const reviews = await Review.find({ product: productId })
-      .populate('user', 'email fullName')
-      .sort({ createdAt: -1 });
-    res.status(200).json(reviews);
-  } catch (error) {
-    res.status(500).json({ message: 'Server Error', error: error.message });
+  if (!(await Product.exists({ _id: productId }))) {
+    throw ApiError.notFound('Product not found');
   }
-}
 
-// delete review
-export async function deleteReview(req, res) {
-  const { reviewId } = req.params;
-  const userId = req.user.id;
-  try {
-    const review = await Review.findById(reviewId);
-    if (!reviewId) return res.status(404).json({ message: 'Review not found' });
-
-    if (review.user.toString() !== userId.toString()) {
-      return res
-        .status(403)
-        .json({ message: 'You are not allowed to delete this review' });
-    }
-    const deletedReview = await Review.findByIdAndDelete(review);
-    res
-      .status(200)
-      .json({ message: 'Review deleted successfully', deletedReview });
-  } catch (error) {
-    res.status(500).json({ message: 'Server Error', error: error.message });
+  if (await Review.exists({ user: req.user._id, product: productId })) {
+    throw ApiError.conflict('You already reviewed this product');
   }
-}
+
+  const review = await Review.create({
+    product: productId,
+    user: req.user._id,
+    comment,
+    rating,
+  });
+
+  await review.populate('user', 'fullName');
+  res.status(201).json(review);
+});
+
+export const getReviewsForProduct = asyncHandler(async (req, res) => {
+  const reviews = await Review.find({ product: req.params.productId })
+    .populate('user', 'fullName')
+    .sort({ createdAt: -1 })
+    .lean();
+
+  res.json(reviews);
+});
+
+export const deleteReview = asyncHandler(async (req, res) => {
+  // Autorul sau un admin. Proprietarul e parte din filtru pentru utilizatorii
+  // obișnuiți, deci nu există fereastră între citire și ștergere.
+  const filter =
+    req.user.role === 'admin'
+      ? { _id: req.params.reviewId }
+      : { _id: req.params.reviewId, user: req.user._id };
+
+  const deleted = await Review.findOneAndDelete(filter);
+  if (!deleted) throw ApiError.notFound('Review not found');
+
+  res.json({ _id: deleted._id });
+});

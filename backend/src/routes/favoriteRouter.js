@@ -1,19 +1,21 @@
-import extress from 'express';
+import express from 'express';
 import { protect } from '../middleware/authMiddleware.js';
-import * as favoriteController from '../controllers/favoriteControler.js';
-
-const {
-  getProductsFromFavorite,
+import { validate } from '../middleware/validate.js';
+import {
+  getFavorites,
   addProductToFavorite,
   addProductFromFavToCart,
   deleteProductFromFavorite,
-} = favoriteController;
+  favoriteSchema,
+} from '../controllers/favoriteController.js';
 
-const router = extress.Router();
+const router = express.Router();
 
-router.post('/add', protect, addProductToFavorite);
-router.post('/to-cart', protect, addProductFromFavToCart);
-router.get('/get', protect, getProductsFromFavorite);
-router.delete('/:id', protect, deleteProductFromFavorite);
+router.use(protect);
+
+router.get('/', getFavorites);
+router.post('/', validate(favoriteSchema), addProductToFavorite);
+router.post('/to-cart', validate(favoriteSchema), addProductFromFavToCart);
+router.delete('/:id', deleteProductFromFavorite);
 
 export default router;

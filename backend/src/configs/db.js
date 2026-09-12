@@ -2,12 +2,16 @@ import mongoose from 'mongoose';
 
 export const connectDB = async () => {
   try {
+    mongoose.set('strictQuery', true);
+
     await mongoose.connect(process.env.MONGO_URI, {
-      dbName: 'e-shop_db',
+      dbName: process.env.MONGO_DB_NAME || 'e-shop_db',
+      serverSelectionTimeoutMS: 10000,
     });
-    console.log('MongoDB connected successfully');
+
+    console.log('MongoDB connected');
   } catch (error) {
-    console.log('Error connecting to MongoDB', error);
+    console.error('MongoDB connection failed:', error.message);
     process.exit(1);
   }
 };

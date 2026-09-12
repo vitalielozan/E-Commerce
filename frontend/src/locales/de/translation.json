@@ -1,154 +1,248 @@
 {
+  "meta": {
+    "defaultTitle": "TV-Maxx — Fernseher, die sich lohnen",
+    "defaultDescription": "OLED-, MiniLED- und QLED-Fernseher von sieben Marken, mit technischen Daten, Bewertungen und schneller Lieferung."
+  },
   "common": {
-    "loading": "Wird geladen...",
-    "errorLoadingProduct": "Fehler beim Laden des Produkts.",
+    "loading": "Wird geladen",
     "goBack": "Zurück",
-    "continueShopping": "Weiter einkaufen",
     "anonymous": "Anonym",
-    "currency": "$",
-    "theme": {
-      "light": "Hell",
-      "dark": "Dunkel"
-    }
+    "retry": "Erneut versuchen",
+    "loadError": "Das konnten wir nicht laden",
+    "loadErrorHint": "Prüfe deine Verbindung und versuche es erneut."
   },
   "nav": {
-    "home": "Startseite",
-    "favorites": "Favoriten",
+    "primary": "Hauptmenü",
+    "shop": "Shop",
+    "brands": "Marken",
     "cart": "Warenkorb",
-    "login": "Anmelden",
-    "logout": "Abmelden",
-    "searchPlaceholder": "Suchen...",
-    "searchGo": "Los",
-    "language": "Sprache"
+    "favorites": "Merkliste",
+    "orders": "Bestellungen",
+    "signIn": "Anmelden",
+    "signOut": "Abmelden",
+    "language": "Sprache",
+    "searchLabel": "Produkte suchen",
+    "searchPlaceholder": "Fernseher suchen",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "skipToContent": "Zum Inhalt springen"
   },
-  "hero": {
-    "title": "Entdecke Top-Marken & exklusive Angebote",
-    "subtitle": "Kaufe smarter mit kuratierten Kollektionen von Premium-Marken an einem Ort."
+  "theme": {
+    "switchToDark": "Zum dunklen Design wechseln",
+    "switchToLight": "Zum hellen Design wechseln"
   },
   "home": {
-    "featuredBrands": "Empfohlene Marken",
-    "viewAllBrands": "Alle Marken anzeigen",
-    "productsLoading": "Produkte werden geladen..."
+    "viewProduct": "Modell ansehen",
+    "viewAll": "Alle ansehen",
+    "topRated": "Am besten bewertet",
+    "topRatedHint": "Die Modelle mit den besten Bewertungen.",
+    "newArrivals": "Zuletzt aufgenommen",
+    "newArrivalsHint": "Neu im Sortiment."
+  },
+  "shop": {
+    "title": "Alle Fernseher",
+    "subtitle": "Nach Marke, Bildschirmgröße und Preis filtern.",
+    "resultsFor": "Ergebnisse für „{{query}}“",
+    "filters": "Filter",
+    "clearAll": "Filter zurücksetzen",
+    "brand": "Marke",
+    "screenSize": "Bildschirmgröße",
+    "maxPrice": "Höchstpreis",
+    "sortBy": "Sortierung",
+    "sort": {
+      "newest": "Neueste",
+      "priceAsc": "Preis aufsteigend",
+      "priceDesc": "Preis absteigend",
+      "rating": "Beste Bewertung"
+    },
+    "resultCount_one": "{{count}} Fernseher",
+    "resultCount_other": "{{count}} Fernseher",
+    "noResults": "Keine Treffer für diese Filter",
+    "noResultsHint": "Erweitere den Preisbereich oder entferne eine Marke.",
+    "pagination": "Seiten",
+    "previous": "Zurück",
+    "next": "Weiter",
+    "pageOf": "Seite {{page}} von {{total}}"
   },
   "brands": {
-    "allBrands": "Alle Marken",
-    "viewAll": "Alle anzeigen",
-    "prev": "Zurück",
-    "next": "Weiter",
-    "noProductsForBrand": "Keine Produkte für {{brandName}} gefunden.",
-    "descriptions": {
-      "SAMSUNG": "Samsung, moderne innovative Elektronik für smartes Leben",
-      "JVC": "Zuverlässige Sound- und Videolösungen von JVC",
-      "PANASONIC": "Panasonic bringt fortschrittliche Technik für den Alltag",
-      "LG": "Smarte Geräte für moderne Haushalte mit LG",
-      "SHARP": "Hochleistungs-Displays und Elektronik von Sharp",
-      "HISENSE": "Erschwingliche Qualität mit modernen Funktionen",
-      "default": "Produkte der Marke {{brandName}}"
-    }
+    "title": "Unsere Marken",
+    "subtitle": "Sieben Hersteller, vom günstigen Panel bis zum Referenz-OLED.",
+    "modelCount_one": "{{count}} Modell",
+    "modelCount_other": "{{count}} Modelle",
+    "from": "ab {{price}}"
   },
   "product": {
-    "viewDetails": "Details ansehen",
-    "notFound": "Produkt nicht gefunden.",
     "addToCart": "In den Warenkorb",
-    "addToFavorites": "Zu Favoriten hinzufügen"
-  },
-  "reviews": {
-    "title": "Bewertungen",
-    "writeComment": "Kommentar schreiben...",
-    "stars": "{{count}} Sterne",
-    "send": "Bewertung senden",
-    "mustLogin": "Du musst angemeldet sein, um eine Bewertung zu schreiben.",
-    "loading": "Bewertungen werden geladen...",
-    "empty": "Für dieses Produkt gibt es keine Bewertungen."
-  },
-  "auth": {
-    "welcomeBack": "Willkommen zurück",
-    "loginSubtitle": "Bitte gib deine Daten ein, um dich anzumelden.",
-    "emailAddress": "E-Mail-Adresse",
-    "password": "Passwort",
-    "minChars": "Mindestens 8 Zeichen",
-    "login": "ANMELDEN",
-    "noAccount": "Noch kein Konto?",
-    "signUp": "Registrieren",
-    "createAccount": "Konto erstellen",
-    "signupSubtitle": "Tritt uns heute bei, indem du unten deine Daten eingibst",
-    "fullName": "Vollständiger Name",
-    "yourName": "Dein Name",
-    "confirmPassword": "Passwort bestätigen",
-    "signUpButton": "REGISTRIEREN",
-    "alreadyHaveAccount": "Du hast bereits ein Konto?",
-    "loginLink": "Anmelden",
-    "errors": {
-      "invalidEmail": "Bitte gib eine gültige E-Mail-Adresse ein.",
-      "enterPassword": "Bitte gib das Passwort ein.",
-      "enterName": "Bitte gib deinen Namen ein.",
-      "invalidPassword": "Das Passwort muss mindestens 8 Zeichen lang sein und Großbuchstaben, Zahlen und Sonderzeichen enthalten.",
-      "passwordMismatch": "Passwörter stimmen nicht überein.",
-      "generic": "Etwas ist schiefgelaufen. Bitte versuche es erneut"
-    },
-    "sideTitle": "TV online kaufen! Der Kauf eines neuen Fernsehers kann mit uns ganz einfach sein."
+    "addToCartAction": "In den Warenkorb",
+    "inCart": "Im Warenkorb",
+    "inCartRemove": "Im Warenkorb — entfernen",
+    "outOfStock": "Nicht auf Lager",
+    "inStock": "Auf Lager",
+    "lowStock": "Nur noch {{count}} verfügbar",
+    "addToFavorites": "{{title}} zur Merkliste hinzufügen",
+    "removeFromFavorites": "{{title}} von der Merkliste entfernen",
+    "specifications": "Technische Daten",
+    "related": "Das könnte dir auch gefallen",
+    "savePercent": "{{percent}}% sparen",
+    "imageAlt": "{{title}}, Bild {{index}}",
+    "previousImage": "Vorheriges Bild",
+    "nextImage": "Nächstes Bild",
+    "goToImage": "Zu Bild {{index}}"
   },
   "cart": {
-    "title": "Warenkorb",
-    "total": "Gesamt:",
+    "title": "Dein Warenkorb",
+    "empty": "Dein Warenkorb ist leer",
+    "emptyHint": "Fernseher, die du hinzufügst, erscheinen hier.",
+    "emptyAction": "Fernseher ansehen",
+    "startShopping": "Fernseher ansehen",
+    "signInTitle": "Melde dich an, um deinen Warenkorb zu sehen",
+    "signInHint": "Dein Warenkorb wird im Konto gespeichert und ist auf allen Geräten verfügbar.",
+    "summary": "Übersicht",
+    "subtotal": "Zwischensumme",
+    "subtotalFor_one": "Zwischensumme ({{count}} Artikel)",
+    "subtotalFor_other": "Zwischensumme ({{count}} Artikel)",
+    "shipping": "Versand",
+    "freeShipping": "Kostenlos",
+    "freeShippingHint": "Noch {{amount}} bis zum kostenlosen Versand.",
+    "total": "Gesamt",
     "checkout": "Zur Kasse",
-    "empty": "Es befinden sich keine Produkte im Warenkorb. Fülle ihn mit einem unserer Angebote."
+    "continueShopping": "Weiter einkaufen",
+    "clear": "Warenkorb leeren",
+    "quantity": "Menge",
+    "quantityFor": "Menge für {{title}}",
+    "increaseQuantity": "Menge erhöhen",
+    "decreaseQuantity": "Menge verringern",
+    "removeItem": "{{title}} entfernen",
+    "eachPrice": "{{price}} pro Stück"
   },
   "favorites": {
-    "title": "Deine Favoritenprodukte",
-    "empty": "Es gibt keine Favoritenprodukte. Wähle deine Favoriten aus unseren Angeboten.",
-    "alreadyInCart": "Produkt ist bereits im Warenkorb!"
-  },
-  "notifications": {
-    "loginForCart": "Melde dich an, um diesen Artikel in den Warenkorb zu legen.",
-    "invalidProduct": "Ungültiges Produkt.",
-    "productInCart": "Produkt ist bereits im Warenkorb!",
-    "addedToCart": "Zum Warenkorb hinzugefügt!",
-    "failedAddToCart": "Hinzufügen zum Warenkorb fehlgeschlagen.",
-    "removedFromCart": "Aus dem Warenkorb entfernt!",
-    "failedRemoveFromCart": "Entfernen aus dem Warenkorb fehlgeschlagen.",
-    "productInFavorites": "Produkt ist bereits in den Favoriten!",
-    "addedToFavorites": "Zu Favoriten hinzugefügt!",
-    "failedAddToFavorite": "Hinzufügen zu Favoriten fehlgeschlagen.",
-    "addedToCartFromFavorite": "Aus Favoriten in den Warenkorb hinzugefügt!",
-    "failedAddFromFavorite": "Hinzufügen aus Favoriten fehlgeschlagen.",
-    "removedFromFavorite": "Aus Favoriten entfernt!",
-    "failedRemoveFromFavorite": "Entfernen aus Favoriten fehlgeschlagen.",
-    "cartCleared": "Warenkorb geleert.",
-    "failedClearCart": "Warenkorb konnte nicht geleert werden."
+    "title": "Merkliste",
+    "empty": "Noch nichts gemerkt",
+    "emptyHint": "Tippe auf das Herz eines Fernsehers, um ihn zu speichern.",
+    "signInTitle": "Melde dich an, um deine Merkliste zu sehen",
+    "signInHint": "Gemerkte Fernseher bleiben in deinem Konto."
   },
   "checkout": {
     "title": "Kasse",
-    "success": "Zahlung erfolgreich! Weiterleitung zur Startseite...",
-    "orderSummary": "Bestellübersicht",
-    "billingAddress": "Rechnungsadresse",
+    "deliveryDetails": "Lieferung",
+    "payment": "Zahlung",
     "shippingAddress": "Lieferadresse",
+    "billingAddress": "Rechnungsadresse",
     "cardNumber": "Kartennummer",
-    "payNow": "Jetzt bezahlen",
-    "processing": "Wird verarbeitet...",
+    "demoCardHint": "Demo-Shop — nutze 4242 4242 4242 4242.",
+    "privacyNote": "Deine Kartennummer bleibt in diesem Browser. Zu uns gelangen nur die letzten vier Ziffern.",
+    "orderSummary": "Bestellübersicht",
+    "placeOrder": "{{amount}} bezahlen",
+    "processing": "Wird verarbeitet",
+    "failed": "Die Bestellung konnte nicht aufgegeben werden",
+    "successTitle": "Bestellung bestätigt",
+    "successBody": "Wir haben deine Bestellung unter {{reference}} gespeichert. Normalerweise käme jetzt eine Bestätigung per E-Mail.",
     "validation": {
-      "billingRequired": "Rechnungsadresse ist erforderlich",
-      "shippingRequired": "Lieferadresse ist erforderlich",
-      "invalidCard": "Ungültige Kartennummer",
-      "cardRequired": "Kartennummer ist erforderlich"
+      "billingRequired": "Gib eine Rechnungsadresse ein",
+      "shippingRequired": "Gib eine Lieferadresse ein",
+      "addressTooShort": "Diese Adresse wirkt zu kurz",
+      "cardRequired": "Gib eine Kartennummer ein",
+      "invalidCard": "Diese Kartennummer ist ungültig"
     }
   },
-  "search": {
-    "resultFor": "Ergebnis für:",
-    "sortByPrice": "Nach Preis sortieren:",
-    "default": "Standard",
-    "asc": "Preis aufsteigend",
-    "desc": "Preis absteigend",
-    "noResults": "Keine Produkte gefunden."
+  "orders": {
+    "title": "Deine Bestellungen",
+    "empty": "Noch keine Bestellungen",
+    "emptyHint": "Aufgegebene Bestellungen erscheinen hier.",
+    "signInTitle": "Melde dich an, um deine Bestellungen zu sehen",
+    "signInHint": "Deine Bestellhistorie ist mit deinem Konto verknüpft.",
+    "notFound": "Diese Bestellung wurde nicht gefunden",
+    "backToOrders": "Alle Bestellungen",
+    "itemCount_one": "{{count}} Artikel",
+    "itemCount_other": "{{count}} Artikel",
+    "quantityAt": "{{quantity}} × {{price}}",
+    "delivery": "Lieferung",
+    "cardEnding": "Karte endet auf {{last4}}",
+    "status": {
+      "pending": "Ausstehend",
+      "paid": "Bezahlt",
+      "shipped": "Versandt",
+      "delivered": "Zugestellt",
+      "cancelled": "Storniert"
+    }
+  },
+  "reviews": {
+    "title": "Bewertungen",
+    "empty": "Noch keine Bewertungen. Sei der Erste.",
+    "noRatingYet": "Keine Bewertungen",
+    "ratingLabel": "Mit {{value}} von 5 bewertet, {{count}} Bewertungen",
+    "yourRating": "Deine Bewertung",
+    "yourReview": "Deine Rezension",
+    "placeholder": "Wie ist das Bild? Der Klang? Würdest du ihn wieder kaufen?",
+    "publish": "Bewertung veröffentlichen",
+    "published": "Danke — deine Bewertung ist online",
+    "deleted": "Bewertung gelöscht",
+    "delete": "Meine Bewertung löschen",
+    "failed": "Die Bewertung konnte nicht gespeichert werden",
+    "alreadyReviewed": "Du hast diesen Fernseher bereits bewertet.",
+    "signInToReview": "Melde dich an, um zu bewerten.",
+    "starLabel_one": "{{count}} Stern",
+    "starLabel_other": "{{count}} Sterne"
+  },
+  "auth": {
+    "signInTitle": "Anmelden",
+    "welcomeBack": "Willkommen zurück",
+    "loginSubtitle": "Melde dich an für Warenkorb, Merkliste und Bestellungen.",
+    "createAccount": "Konto erstellen",
+    "signupSubtitle": "Dauert eine Minute und behält deinen Warenkorb geräteübergreifend.",
+    "fullName": "Vollständiger Name",
+    "emailAddress": "E-Mail",
+    "password": "Passwort",
+    "confirmPassword": "Passwort bestätigen",
+    "showPassword": "Passwort anzeigen",
+    "hidePassword": "Passwort verbergen",
+    "signInAction": "Anmelden",
+    "signUpAction": "Konto erstellen",
+    "noAccount": "Noch kein Konto?",
+    "signUpLink": "Jetzt erstellen",
+    "alreadyHaveAccount": "Schon ein Konto?",
+    "loginLink": "Anmelden",
+    "sessionExpired": "Deine Sitzung ist abgelaufen — bitte melde dich erneut an.",
+    "rules": {
+      "length": "Mindestens 8 Zeichen",
+      "uppercase": "Ein Großbuchstabe",
+      "lowercase": "Ein Kleinbuchstabe",
+      "digit": "Eine Ziffer",
+      "special": "Ein Sonderzeichen"
+    },
+    "errors": {
+      "invalidEmail": "Gib eine gültige E-Mail-Adresse ein",
+      "enterPassword": "Gib dein Passwort ein",
+      "enterName": "Gib deinen Namen ein",
+      "weakPassword": "Das Passwort erfüllt nicht alle Anforderungen",
+      "passwordMismatch": "Die Passwörter stimmen nicht überein",
+      "generic": "Etwas ist schiefgelaufen. Bitte versuche es erneut."
+    }
+  },
+  "notifications": {
+    "loginRequired": "Melde dich zuerst an",
+    "addedToCart": "{{title}} zum Warenkorb hinzugefügt",
+    "removedFromCart": "Aus dem Warenkorb entfernt",
+    "failedAddToCart": "Das konnte nicht in den Warenkorb gelegt werden",
+    "failedRemoveFromCart": "Der Artikel konnte nicht entfernt werden",
+    "failedUpdateCart": "Die Menge konnte nicht geändert werden",
+    "failedClearCart": "Der Warenkorb konnte nicht geleert werden",
+    "addedToFavorites": "Zur Merkliste hinzugefügt",
+    "removedFromFavorites": "Von der Merkliste entfernt",
+    "favoriteFailed": "Die Merkliste konnte nicht aktualisiert werden",
+    "loadFailed": "Warenkorb und Merkliste konnten nicht geladen werden"
   },
   "notFound": {
-    "oops": "Oops!",
-    "message": "Die gesuchte Seite existiert nicht...",
-    "goBack": "Zurück"
+    "title": "Seite nicht gefunden",
+    "description": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
+    "action": "Fernseher ansehen"
   },
   "footer": {
-    "tagline": "Deine Quelle für Premium-Fernseher.",
-    "followUs": "Folge uns",
-    "rights": "Alle Rechte vorbehalten von Vitalie Lozan."
+    "description": "Ein Demo-Shop auf Basis des MERN-Stacks. Produktnamen und Marken sind frei erfunden.",
+    "shop": "Shop",
+    "account": "Konto",
+    "topRated": "Am besten bewertet",
+    "demoNotice": "Portfolio-Projekt — es werden keine echten Bestellungen verarbeitet.",
+    "photoCredit": "Fotos von Pexels"
   }
 }

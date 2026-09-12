@@ -1,22 +1,22 @@
-import React from 'react';
-import { useDarkMode } from '../hooks/useDarkMode.js';
-import { MdDarkMode } from 'react-icons/md';
-import { MdLightMode } from 'react-icons/md';
+import { Moon, Sun } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { useDarkMode } from '../hooks/useDarkMode.js';
 
 function ThemeToggle() {
-  const [darkMode, setDarkMode] = useDarkMode();
+  const { darkMode, toggleTheme } = useDarkMode();
   const { t } = useTranslation();
 
   return (
     <button
-      onClick={() => setDarkMode(!darkMode)}
-      className="rounded-xl border border-slate-200 bg-white px-4 py-2 text-slate-700 transition-colors hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300 dark:hover:bg-slate-800"
+      type="button"
+      onClick={toggleTheme}
+      className="text-secondary grid h-10 w-10 place-items-center rounded-md hover:text-[var(--text-primary)]"
+      aria-label={darkMode ? t('theme.switchToLight') : t('theme.switchToDark')}
     >
       {darkMode ? (
-        <MdLightMode className="size-6" title={t('common.theme.light')} />
+        <Sun className="h-5 w-5" aria-hidden="true" />
       ) : (
-        <MdDarkMode className="size-6" title={t('common.theme.dark')} />
+        <Moon className="h-5 w-5" aria-hidden="true" />
       )}
     </button>
   );

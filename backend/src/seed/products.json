@@ -1,0 +1,1196 @@
+[
+  {
+    "brand": "Aurio",
+    "title": "Aurio V5 43\" 4K HDR",
+    "price": 449.99,
+    "image": "https://images.pexels.com/photos/5721917/pexels-photo-5721917.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/5721917/pexels-photo-5721917.jpeg",
+      "https://images.pexels.com/photos/5998138/pexels-photo-5998138.jpeg",
+      "https://images.pexels.com/photos/7689133/pexels-photo-7689133.jpeg",
+      "https://images.pexels.com/photos/6782370/pexels-photo-6782370.jpeg"
+    ],
+    "shortDesc": "43\" 4K HDR with 120 Hz panel",
+    "description": "The V5 brings a 120 Hz panel down to 43\", which is unusual at this size and makes it a strong desk or small-room gaming screen. Two HDMI 2.1 ports handle 4K at 120 Hz.",
+    "category": "tv",
+    "compareAtPrice": null,
+    "screenSize": 43,
+    "slug": "aurio-v5-43-4k-hdr",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "120 Hz",
+      "HDR": "Dolby Vision, HDR10",
+      "OS": "AurioOS",
+      "HDMI": "4 (2x HDMI 2.1)",
+      "VRR": "Yes"
+    },
+    "stock": 21
+  },
+  {
+    "brand": "Aurio",
+    "title": "Aurio V6 50\" 4K HDR",
+    "price": 599.99,
+    "image": "https://images.pexels.com/photos/5721900/pexels-photo-5721900.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/5721900/pexels-photo-5721900.jpeg",
+      "https://images.pexels.com/photos/5202957/pexels-photo-5202957.jpeg",
+      "https://images.pexels.com/photos/36871613/pexels-photo-36871613.jpeg",
+      "https://images.pexels.com/photos/9646741/pexels-photo-9646741.jpeg"
+    ],
+    "shortDesc": "50\" 4K HDR with Aurio motion handling",
+    "description": "Aurio motion processing works on the source frame rate rather than interpolating everything to the same smoothness, so film keeps its 24 fps character while sport stays fluid.",
+    "category": "tv",
+    "compareAtPrice": null,
+    "screenSize": 50,
+    "slug": "aurio-v6-50-4k-hdr",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "60 Hz",
+      "HDR": "Dolby Vision, HDR10",
+      "OS": "AurioOS",
+      "HDMI": "4"
+    },
+    "stock": 11
+  },
+  {
+    "brand": "Aurio",
+    "title": "Aurio V7 50\" Full Array",
+    "price": 649.99,
+    "image": "https://images.pexels.com/photos/5721911/pexels-photo-5721911.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/5721911/pexels-photo-5721911.jpeg",
+      "https://images.pexels.com/photos/9902128/pexels-photo-9902128.jpeg",
+      "https://images.pexels.com/photos/7546557/pexels-photo-7546557.jpeg",
+      "https://images.pexels.com/photos/7546717/pexels-photo-7546717.jpeg"
+    ],
+    "shortDesc": "50\" full-array backlight with local dimming",
+    "description": "A full-array backlight sits directly behind the panel instead of along its edges, so dimming is controlled across the whole surface. The difference is most visible in letterboxed films, where the black bars stay black.",
+    "category": "tv",
+    "compareAtPrice": null,
+    "screenSize": 50,
+    "slug": "aurio-v7-50-full-array",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "120 Hz",
+      "HDR": "Dolby Vision, HDR10",
+      "OS": "AurioOS",
+      "Backlight": "Full array",
+      "Local dimming": "Yes",
+      "HDMI": "4 (2x HDMI 2.1)"
+    },
+    "stock": 6
+  },
+  {
+    "brand": "Aurio",
+    "title": "Aurio Vista XR 55\"",
+    "price": 699.99,
+    "image": "https://images.pexels.com/photos/5721900/pexels-photo-5721900.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/5721900/pexels-photo-5721900.jpeg",
+      "https://images.pexels.com/photos/6699796/pexels-photo-6699796.jpeg",
+      "https://images.pexels.com/photos/21792101/pexels-photo-21792101.jpeg",
+      "https://images.pexels.com/photos/6580225/pexels-photo-6580225.jpeg"
+    ],
+    "shortDesc": "55\" with NeuraX cognitive processing",
+    "description": "NeuraX analyses the frame the way a viewer does — finding the focal point and allocating sharpening and contrast there first, rather than treating every part of the image equally.",
+    "category": "tv",
+    "compareAtPrice": null,
+    "screenSize": 55,
+    "slug": "aurio-vista-xr-55",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "120 Hz",
+      "HDR": "Dolby Vision, HDR10",
+      "OS": "AurioOS",
+      "Processor": "NeuraX",
+      "HDMI": "4 (2x HDMI 2.1)",
+      "VRR": "Yes"
+    },
+    "stock": 23
+  },
+  {
+    "brand": "Aurio",
+    "title": "Aurio V6 65\" 4K LED",
+    "price": 899.99,
+    "image": "https://images.pexels.com/photos/5721923/pexels-photo-5721923.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/5721923/pexels-photo-5721923.jpeg",
+      "https://images.pexels.com/photos/6297080/pexels-photo-6297080.jpeg",
+      "https://images.pexels.com/photos/8089078/pexels-photo-8089078.jpeg",
+      "https://images.pexels.com/photos/7614416/pexels-photo-7614416.jpeg"
+    ],
+    "shortDesc": "65\" 4K LED with wide colour coverage",
+    "description": "The 65\" V6 covers the DCI-P3 colour space used for cinema grading, so films arrive closer to how they were finished. A dependable main-room set without flagship pricing.",
+    "category": "tv",
+    "compareAtPrice": null,
+    "screenSize": 65,
+    "slug": "aurio-v6-65-4k-led",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "60 Hz",
+      "HDR": "Dolby Vision, HDR10",
+      "OS": "AurioOS",
+      "Colour gamut": "DCI-P3",
+      "HDMI": "4"
+    },
+    "stock": 16
+  },
+  {
+    "brand": "Aurio",
+    "title": "Aurio Vista 65\" Trilume",
+    "price": 899.99,
+    "image": "https://images.pexels.com/photos/5721923/pexels-photo-5721923.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/5721923/pexels-photo-5721923.jpeg",
+      "https://images.pexels.com/photos/6782370/pexels-photo-6782370.jpeg",
+      "https://images.pexels.com/photos/8135119/pexels-photo-8135119.jpeg",
+      "https://images.pexels.com/photos/7587782/pexels-photo-7587782.jpeg"
+    ],
+    "shortDesc": "65\" with Trilume wide-gamut colour",
+    "description": "Trilume widens the colour gamut beyond standard LED, pulling out the subtle gradations in skies and skin that otherwise band into visible steps.",
+    "category": "tv",
+    "compareAtPrice": null,
+    "screenSize": 65,
+    "slug": "aurio-vista-65-trilume",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "60 Hz",
+      "HDR": "Dolby Vision, HDR10",
+      "OS": "AurioOS",
+      "Panel": "Trilume",
+      "HDMI": "4"
+    },
+    "stock": 10
+  },
+  {
+    "brand": "Aurio",
+    "title": "Aurio Lumen 65\" OLED",
+    "price": 1599.99,
+    "image": "https://images.pexels.com/photos/5721906/pexels-photo-5721906.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/5721906/pexels-photo-5721906.jpeg",
+      "https://images.pexels.com/photos/6297080/pexels-photo-6297080.jpeg",
+      "https://images.pexels.com/photos/8089078/pexels-photo-8089078.jpeg",
+      "https://images.pexels.com/photos/7614416/pexels-photo-7614416.jpeg"
+    ],
+    "shortDesc": "65\" OLED with NeuraX and panel-driven audio",
+    "description": "The Lumen drives sound through actuators behind the OLED panel itself, so dialogue comes from the speaker on screen rather than from below it. Paired with NeuraX processing and per-pixel black, this is the Aurio reference set.",
+    "category": "tv",
+    "compareAtPrice": null,
+    "screenSize": 65,
+    "slug": "aurio-lumen-65-oled",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "120 Hz",
+      "HDR": "Dolby Vision, HDR10",
+      "OS": "AurioOS",
+      "Panel": "OLED",
+      "Processor": "NeuraX",
+      "Audio": "Panel-driven surface audio",
+      "HDMI": "4 (2x HDMI 2.1)"
+    },
+    "stock": 16
+  },
+  {
+    "brand": "Aurio",
+    "title": "Aurio Vista XR 75\" Contrast",
+    "price": 2199.99,
+    "image": "https://images.pexels.com/photos/5721929/pexels-photo-5721929.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/5721929/pexels-photo-5721929.jpeg",
+      "https://images.pexels.com/photos/19005933/pexels-photo-19005933.jpeg",
+      "https://images.pexels.com/photos/34688219/pexels-photo-34688219.jpeg",
+      "https://images.pexels.com/photos/5998138/pexels-photo-5998138.jpeg"
+    ],
+    "shortDesc": "75\" flagship LED with contrast booster",
+    "description": "The largest Vista panel, with a backlight dense enough to hold deep black next to specular highlights. The contrast booster raises peak brightness in small bright areas without lifting the rest of the frame.",
+    "category": "tv",
+    "compareAtPrice": null,
+    "screenSize": 75,
+    "slug": "aurio-vista-xr-75-contrast",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "120 Hz",
+      "HDR": "Dolby Vision, HDR10",
+      "OS": "AurioOS",
+      "Processor": "NeuraX",
+      "Backlight": "Full array with contrast booster",
+      "HDMI": "4 (2x HDMI 2.1)",
+      "VRR": "Yes"
+    },
+    "stock": 7
+  },
+  {
+    "brand": "Halden",
+    "title": "Halden H3 32\" HD Smart TV",
+    "price": 179.99,
+    "image": "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg",
+      "https://images.pexels.com/photos/14614673/pexels-photo-14614673.jpeg",
+      "https://images.pexels.com/photos/5008383/pexels-photo-5008383.jpeg",
+      "https://images.pexels.com/photos/13424521/pexels-photo-13424521.jpeg"
+    ],
+    "shortDesc": "Compact 32\" HD screen for kitchens and bedrooms",
+    "description": "The Halden H3 packs a bright HD panel into a slim 32\" frame, making it an easy fit for a kitchen counter or a bedroom wall. HaldenOS keeps the major streaming apps one click away, and two HDMI inputs leave room for a console and a soundbar.",
+    "category": "tv",
+    "compareAtPrice": 224.99,
+    "screenSize": 32,
+    "slug": "halden-h3-32-hd-smart-tv",
+    "specs": {
+      "Resolution": "HD 1366x768",
+      "Refresh rate": "60 Hz",
+      "HDR": "None",
+      "OS": "HaldenOS",
+      "HDMI": "2"
+    },
+    "stock": 25
+  },
+  {
+    "brand": "Halden",
+    "title": "Halden A6 43\" 4K UHD",
+    "price": 299.99,
+    "image": "https://res.cloudinary.com/dt6wcduvq/image/upload/v1770644572/product_25_3.png",
+    "images": [
+      "https://res.cloudinary.com/dt6wcduvq/image/upload/v1770644572/product_25_3.png",
+      "https://images.pexels.com/photos/34989208/pexels-photo-34989208.jpeg",
+      "https://images.pexels.com/photos/29942709/pexels-photo-29942709.jpeg",
+      "https://images.pexels.com/photos/7476607/pexels-photo-7476607.jpeg"
+    ],
+    "shortDesc": "43\" 4K with Dolby Vision and wide colour",
+    "description": "A 43\" 4K panel with Dolby Vision support that lifts shadow detail in darker scenes. The A6 is built for mixed use — daytime sport, evening films — and its low input lag keeps console gaming responsive.",
+    "category": "tv",
+    "compareAtPrice": 374.99,
+    "screenSize": 43,
+    "slug": "halden-a6-43-4k-uhd",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "60 Hz",
+      "HDR": "Dolby Vision, HDR10",
+      "OS": "HaldenOS",
+      "HDMI": "3"
+    },
+    "stock": 5
+  },
+  {
+    "brand": "Halden",
+    "title": "Halden H5 55\" 4K Smart TV",
+    "price": 459.99,
+    "image": "https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg",
+      "https://images.pexels.com/photos/13348768/pexels-photo-13348768.jpeg",
+      "https://images.pexels.com/photos/7513460/pexels-photo-7513460.jpeg",
+      "https://images.pexels.com/photos/7991437/pexels-photo-7991437.jpeg"
+    ],
+    "shortDesc": "55\" 4K all-rounder with slim bezels",
+    "description": "The H5 is the size most living rooms settle on. A 4K panel with near-borderless bezels, HDR10 tone mapping and a centre stand that fits a standard media unit without overhang.",
+    "category": "tv",
+    "compareAtPrice": 574.99,
+    "screenSize": 55,
+    "slug": "halden-h5-55-4k-smart-tv",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "60 Hz",
+      "HDR": "HDR10",
+      "OS": "HaldenOS",
+      "HDMI": "3"
+    },
+    "stock": 10
+  },
+  {
+    "brand": "Halden",
+    "title": "Halden U7 55\" UltraLED",
+    "price": 629.99,
+    "image": "https://images.pexels.com/photos/5721925/pexels-photo-5721925.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/5721925/pexels-photo-5721925.jpeg",
+      "https://images.pexels.com/photos/28228021/pexels-photo-28228021.jpeg",
+      "https://images.pexels.com/photos/11295838/pexels-photo-11295838.jpeg",
+      "https://images.pexels.com/photos/6636296/pexels-photo-6636296.jpeg"
+    ],
+    "shortDesc": "55\" UltraLED, 120 Hz, built for gaming",
+    "description": "UltraLED backlighting drives higher peak brightness than a standard LED panel, and the 120 Hz refresh rate with variable refresh makes the U7 a natural match for a current-generation console. HDMI 2.1 on two ports.",
+    "category": "tv",
+    "compareAtPrice": 787.49,
+    "screenSize": 55,
+    "slug": "halden-u7-55-ultraled",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "120 Hz",
+      "HDR": "Dolby Vision, HDR10+",
+      "OS": "HaldenOS",
+      "HDMI": "4 (2x HDMI 2.1)",
+      "VRR": "Yes"
+    },
+    "stock": 8
+  },
+  {
+    "brand": "Halden",
+    "title": "Halden U6 65\" UltraLED",
+    "price": 649.99,
+    "image": "https://images.pexels.com/photos/3046580/pexels-photo-3046580.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3046580/pexels-photo-3046580.jpeg",
+      "https://images.pexels.com/photos/13348768/pexels-photo-13348768.jpeg",
+      "https://images.pexels.com/photos/7513460/pexels-photo-7513460.jpeg",
+      "https://images.pexels.com/photos/7991437/pexels-photo-7991437.jpeg"
+    ],
+    "shortDesc": "65\" UltraLED with full-array local dimming",
+    "description": "Full-array local dimming divides the backlight into independently controlled zones, so bright highlights can sit next to genuinely dark areas without the grey wash you get from edge-lit panels.",
+    "category": "tv",
+    "compareAtPrice": 812.49,
+    "screenSize": 65,
+    "slug": "halden-u6-65-ultraled",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "60 Hz",
+      "HDR": "Dolby Vision, HDR10+",
+      "OS": "HaldenOS",
+      "Local dimming": "Full array",
+      "HDMI": "4"
+    },
+    "stock": 10
+  },
+  {
+    "brand": "Kestrel",
+    "title": "Kestrel K3 32\" HD",
+    "price": 199.99,
+    "image": "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg",
+      "https://images.pexels.com/photos/14725587/pexels-photo-14725587.jpeg",
+      "https://images.pexels.com/photos/9131040/pexels-photo-9131040.jpeg",
+      "https://images.pexels.com/photos/7991156/pexels-photo-7991156.jpeg"
+    ],
+    "shortDesc": "Budget 32\" HD with full streaming support",
+    "description": "The K3 is the cheapest way into the Kestrel range and still runs the full StreamOS app library. A practical second set for a bedroom, a garage or a student flat.",
+    "category": "tv",
+    "compareAtPrice": 249.99,
+    "screenSize": 32,
+    "slug": "kestrel-k3-32-hd",
+    "specs": {
+      "Resolution": "HD 1366x768",
+      "Refresh rate": "60 Hz",
+      "HDR": "None",
+      "OS": "StreamOS",
+      "HDMI": "3"
+    },
+    "stock": 6
+  },
+  {
+    "brand": "Kestrel",
+    "title": "Kestrel K4 43\" 4K HDR",
+    "price": 299.99,
+    "image": "https://images.pexels.com/photos/5721907/pexels-photo-5721907.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/5721907/pexels-photo-5721907.jpeg",
+      "https://images.pexels.com/photos/6782370/pexels-photo-6782370.jpeg",
+      "https://images.pexels.com/photos/8135119/pexels-photo-8135119.jpeg",
+      "https://images.pexels.com/photos/7587782/pexels-photo-7587782.jpeg"
+    ],
+    "shortDesc": "43\" 4K HDR at an entry-level price",
+    "description": "The K4 gets 4K and HDR10 into the price bracket where most sets are still Full HD. Compromises are in the audio and the 60 Hz panel, not in the resolution.",
+    "category": "tv",
+    "compareAtPrice": null,
+    "screenSize": 43,
+    "slug": "kestrel-k4-43-4k-hdr",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "60 Hz",
+      "HDR": "HDR10",
+      "OS": "StreamOS",
+      "HDMI": "3"
+    },
+    "stock": 10
+  },
+  {
+    "brand": "Kestrel",
+    "title": "Kestrel K4 50\" 4K StreamOS",
+    "price": 399.99,
+    "image": "https://images.pexels.com/photos/5721902/pexels-photo-5721902.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/5721902/pexels-photo-5721902.jpeg",
+      "https://images.pexels.com/photos/3853993/pexels-photo-3853993.jpeg",
+      "https://images.pexels.com/photos/6487954/pexels-photo-6487954.jpeg",
+      "https://images.pexels.com/photos/4009401/pexels-photo-4009401.jpeg"
+    ],
+    "shortDesc": "50\" 4K with StreamOS built in",
+    "description": "StreamOS puts every app on one home row instead of behind a manufacturer launcher, and the bundled remote has shortcut keys for the four services you use most.",
+    "category": "tv",
+    "compareAtPrice": null,
+    "screenSize": 50,
+    "slug": "kestrel-k4-50-4k-streamos",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "60 Hz",
+      "HDR": "HDR10",
+      "OS": "StreamOS",
+      "Remote": "Shortcut keys",
+      "HDMI": "3"
+    },
+    "stock": 19
+  },
+  {
+    "brand": "Kestrel",
+    "title": "Kestrel K5 50\" Quantum",
+    "price": 449.99,
+    "image": "https://images.pexels.com/photos/5721926/pexels-photo-5721926.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/5721926/pexels-photo-5721926.jpeg",
+      "https://images.pexels.com/photos/9131040/pexels-photo-9131040.jpeg",
+      "https://images.pexels.com/photos/7991156/pexels-photo-7991156.jpeg",
+      "https://images.pexels.com/photos/37834298/pexels-photo-37834298.jpeg"
+    ],
+    "shortDesc": "50\" Quantum dot with Dolby Vision",
+    "description": "The K5 adds a quantum dot layer and Dolby Vision to the K4 chassis. For most rooms this is the point in the Kestrel range where the picture stops looking budget.",
+    "category": "tv",
+    "compareAtPrice": null,
+    "screenSize": 50,
+    "slug": "kestrel-k5-50-quantum",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "60 Hz",
+      "HDR": "Dolby Vision, HDR10",
+      "OS": "StreamOS",
+      "Panel": "Quantum dot",
+      "HDMI": "4"
+    },
+    "stock": 13
+  },
+  {
+    "brand": "Kestrel",
+    "title": "Kestrel K4 65\" 4K HDR",
+    "price": 549.99,
+    "image": "https://images.pexels.com/photos/5721920/pexels-photo-5721920.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/5721920/pexels-photo-5721920.jpeg",
+      "https://images.pexels.com/photos/19866446/pexels-photo-19866446.jpeg",
+      "https://images.pexels.com/photos/6699796/pexels-photo-6699796.jpeg",
+      "https://images.pexels.com/photos/21792101/pexels-photo-21792101.jpeg"
+    ],
+    "shortDesc": "65\" 4K HDR, the size-per-price pick",
+    "description": "Kestrel prices this 65\" panel where many brands sell a 55\". The trade-off is a 60 Hz refresh rate — fine for film and streaming, less so for fast-paced console gaming.",
+    "category": "tv",
+    "compareAtPrice": null,
+    "screenSize": 65,
+    "slug": "kestrel-k4-65-4k-hdr",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "60 Hz",
+      "HDR": "HDR10",
+      "OS": "StreamOS",
+      "HDMI": "3"
+    },
+    "stock": 16
+  },
+  {
+    "brand": "Kestrel",
+    "title": "Kestrel K5 55\" Quantum",
+    "price": 549.99,
+    "image": "https://images.pexels.com/photos/5721902/pexels-photo-5721902.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/5721902/pexels-photo-5721902.jpeg",
+      "https://images.pexels.com/photos/5202957/pexels-photo-5202957.jpeg",
+      "https://images.pexels.com/photos/36871613/pexels-photo-36871613.jpeg",
+      "https://images.pexels.com/photos/9646741/pexels-photo-9646741.jpeg"
+    ],
+    "shortDesc": "55\" Quantum dot with Dolby Vision and Atmos",
+    "description": "The 55\" K5 pairs the quantum dot panel with Dolby Atmos decoding, so a compatible soundbar gets a proper height channel rather than a downmix.",
+    "category": "tv",
+    "compareAtPrice": null,
+    "screenSize": 55,
+    "slug": "kestrel-k5-55-quantum",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "60 Hz",
+      "HDR": "Dolby Vision, HDR10",
+      "Audio": "Dolby Atmos",
+      "OS": "StreamOS",
+      "Panel": "Quantum dot",
+      "HDMI": "4"
+    },
+    "stock": 11
+  },
+  {
+    "brand": "Kestrel",
+    "title": "Kestrel K6 55\" Quantum",
+    "price": 579.99,
+    "image": "https://images.pexels.com/photos/5721920/pexels-photo-5721920.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/5721920/pexels-photo-5721920.jpeg",
+      "https://images.pexels.com/photos/7513460/pexels-photo-7513460.jpeg",
+      "https://images.pexels.com/photos/7991437/pexels-photo-7991437.jpeg",
+      "https://images.pexels.com/photos/26571198/pexels-photo-26571198.jpeg"
+    ],
+    "shortDesc": "55\" Quantum dot with 120 Hz and local dimming",
+    "description": "The K6 is where Kestrel starts competing on picture quality rather than price: a 120 Hz panel, full-array local dimming and variable refresh for consoles.",
+    "category": "tv",
+    "compareAtPrice": null,
+    "screenSize": 55,
+    "slug": "kestrel-k6-55-quantum",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "120 Hz",
+      "HDR": "Dolby Vision, HDR10+",
+      "OS": "StreamOS",
+      "Panel": "Quantum dot",
+      "Local dimming": "Full array",
+      "HDMI": "4 (2x HDMI 2.1)",
+      "VRR": "Yes"
+    },
+    "stock": 17
+  },
+  {
+    "brand": "Kestrel",
+    "title": "Kestrel Peak 65\" MiniLED",
+    "price": 799.99,
+    "image": "https://images.pexels.com/photos/5721912/pexels-photo-5721912.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/5721912/pexels-photo-5721912.jpeg",
+      "https://images.pexels.com/photos/5202917/pexels-photo-5202917.jpeg",
+      "https://images.pexels.com/photos/39332193/pexels-photo-39332193.jpeg",
+      "https://images.pexels.com/photos/36777863/pexels-photo-36777863.jpeg"
+    ],
+    "shortDesc": "65\" MiniLED, the brightest panel Kestrel makes",
+    "description": "The Peak is built for rooms you cannot darken. MiniLED backlighting reaches a peak brightness high enough to hold HDR highlights against afternoon sun through a window.",
+    "category": "tv",
+    "compareAtPrice": null,
+    "screenSize": 65,
+    "slug": "kestrel-peak-65-miniled",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "120 Hz",
+      "HDR": "Dolby Vision, HDR10+",
+      "OS": "StreamOS",
+      "Backlight": "MiniLED",
+      "HDMI": "4 (2x HDMI 2.1)",
+      "VRR": "Yes"
+    },
+    "stock": 10
+  },
+  {
+    "brand": "Lumeo",
+    "title": "Lumeo L2 32\" HD Smart TV",
+    "price": 229.99,
+    "image": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+      "https://images.pexels.com/photos/28549934/pexels-photo-28549934.jpeg",
+      "https://images.pexels.com/photos/1201996/pexels-photo-1201996.jpeg",
+      "https://images.pexels.com/photos/7166933/pexels-photo-7166933.jpeg"
+    ],
+    "shortDesc": "Compact 32\" HD with a bright, even panel",
+    "description": "The L2 is the entry point to the Lumeo range — a 32\" HD panel with even backlighting and a plain, fast interface. A sensible second screen for a bedroom or a small office.",
+    "category": "tv",
+    "compareAtPrice": null,
+    "screenSize": 32,
+    "slug": "lumeo-l2-32-hd-smart-tv",
+    "specs": {
+      "Resolution": "HD 1366x768",
+      "Refresh rate": "60 Hz",
+      "HDR": "None",
+      "OS": "LumeoOS",
+      "HDMI": "2"
+    },
+    "stock": 6
+  },
+  {
+    "brand": "Lumeo",
+    "title": "Lumeo L5 50\" 4K Smart TV",
+    "price": 529.99,
+    "image": "https://images.pexels.com/photos/5721914/pexels-photo-5721914.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/5721914/pexels-photo-5721914.jpeg",
+      "https://images.pexels.com/photos/26571198/pexels-photo-26571198.jpeg",
+      "https://images.pexels.com/photos/6487969/pexels-photo-6487969.jpeg",
+      "https://images.pexels.com/photos/9069368/pexels-photo-9069368.jpeg"
+    ],
+    "shortDesc": "50\" 4K with a fast, uncluttered interface",
+    "description": "A straightforward 50\" 4K set. LumeoOS opens apps quickly and remembers where you stopped, and the three HDMI inputs cover a console, a streaming stick and a soundbar without an adapter.",
+    "category": "tv",
+    "compareAtPrice": null,
+    "screenSize": 50,
+    "slug": "lumeo-l5-50-4k-smart-tv",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "60 Hz",
+      "HDR": "HDR10",
+      "OS": "LumeoOS",
+      "HDMI": "3"
+    },
+    "stock": 6
+  },
+  {
+    "brand": "Lumeo",
+    "title": "Lumeo L6 55\" 4K HDR",
+    "price": 579.99,
+    "image": "https://images.pexels.com/photos/5721903/pexels-photo-5721903.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/5721903/pexels-photo-5721903.jpeg",
+      "https://images.pexels.com/photos/8273646/pexels-photo-8273646.jpeg",
+      "https://images.pexels.com/photos/20653889/pexels-photo-20653889.jpeg",
+      "https://images.pexels.com/photos/7614614/pexels-photo-7614614.jpeg"
+    ],
+    "shortDesc": "55\" 4K HDR with wide dynamic range",
+    "description": "The L6 handles HDR content without the clipping that flattens bright scenes on cheaper panels — clouds keep their texture instead of blowing out to flat white.",
+    "category": "tv",
+    "compareAtPrice": null,
+    "screenSize": 55,
+    "slug": "lumeo-l6-55-4k-hdr",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "60 Hz",
+      "HDR": "HDR10+, HLG",
+      "OS": "LumeoOS",
+      "HDMI": "4"
+    },
+    "stock": 25
+  },
+  {
+    "brand": "Lumeo",
+    "title": "Lumeo HaloLight 55\" 4K",
+    "price": 729.99,
+    "image": "https://images.pexels.com/photos/5721903/pexels-photo-5721903.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/5721903/pexels-photo-5721903.jpeg",
+      "https://images.pexels.com/photos/7476607/pexels-photo-7476607.jpeg",
+      "https://images.pexels.com/photos/10519117/pexels-photo-10519117.jpeg",
+      "https://images.pexels.com/photos/28228021/pexels-photo-28228021.jpeg"
+    ],
+    "shortDesc": "55\" 4K with HaloLight ambient backlighting",
+    "description": "HaloLight projects colour from the rear edges of the panel onto the wall behind it, matched in real time to what is on screen. It makes the picture feel wider than the frame and noticeably reduces eye strain in a dark room.",
+    "category": "tv",
+    "compareAtPrice": null,
+    "screenSize": 55,
+    "slug": "lumeo-halolight-55-4k",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "60 Hz",
+      "HDR": "HDR10+, HLG",
+      "OS": "LumeoOS",
+      "Ambient": "HaloLight, 3-sided",
+      "HDMI": "4"
+    },
+    "stock": 19
+  },
+  {
+    "brand": "Lumeo",
+    "title": "Lumeo HaloLight 65\" 4K",
+    "price": 999.99,
+    "image": "https://images.pexels.com/photos/5721924/pexels-photo-5721924.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/5721924/pexels-photo-5721924.jpeg",
+      "https://images.pexels.com/photos/11295838/pexels-photo-11295838.jpeg",
+      "https://images.pexels.com/photos/6636296/pexels-photo-6636296.jpeg",
+      "https://images.pexels.com/photos/28677646/pexels-photo-28677646.jpeg"
+    ],
+    "shortDesc": "65\" 4K with four-sided HaloLight",
+    "description": "The 65\" HaloLight adds a fourth light bar along the bottom edge, closing the ring of ambient colour around the panel. Best mounted 15-20 cm from a light-coloured wall, where the effect has room to spread.",
+    "category": "tv",
+    "compareAtPrice": null,
+    "screenSize": 65,
+    "slug": "lumeo-halolight-65-4k",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "120 Hz",
+      "HDR": "Dolby Vision, HDR10+",
+      "OS": "LumeoOS",
+      "Ambient": "HaloLight, 4-sided",
+      "HDMI": "4"
+    },
+    "stock": 15
+  },
+  {
+    "brand": "Nordvik",
+    "title": "Nordvik N1 32\" HD LED",
+    "price": 189.99,
+    "image": "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg",
+      "https://images.pexels.com/photos/7214174/pexels-photo-7214174.jpeg",
+      "https://images.pexels.com/photos/7991318/pexels-photo-7991318.jpeg",
+      "https://images.pexels.com/photos/7991486/pexels-photo-7991486.jpeg"
+    ],
+    "shortDesc": "Simple 32\" HD set with a clean interface",
+    "description": "The N1 does one thing well: a sharp HD picture with no menu clutter. NordOS boots straight to your last input, and the slim stand needs only 20 cm of depth.",
+    "category": "tv",
+    "compareAtPrice": null,
+    "screenSize": 32,
+    "slug": "nordvik-n1-32-hd-led",
+    "specs": {
+      "Resolution": "HD 1366x768",
+      "Refresh rate": "60 Hz",
+      "HDR": "None",
+      "OS": "NordOS",
+      "HDMI": "2"
+    },
+    "stock": 24
+  },
+  {
+    "brand": "Nordvik",
+    "title": "Nordvik N3 43\" 4K UHD",
+    "price": 399.99,
+    "image": "https://images.pexels.com/photos/3046581/pexels-photo-3046581.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3046581/pexels-photo-3046581.jpeg",
+      "https://images.pexels.com/photos/6444267/pexels-photo-6444267.jpeg",
+      "https://images.pexels.com/photos/6588583/pexels-photo-6588583.jpeg",
+      "https://images.pexels.com/photos/7545776/pexels-photo-7545776.jpeg"
+    ],
+    "shortDesc": "43\" 4K with AI-assisted upscaling",
+    "description": "Most of what we watch is still not 4K. The N3 upscales HD sources frame by frame, sharpening edges without introducing the halo artefacts that cheaper upscalers leave behind.",
+    "category": "tv",
+    "compareAtPrice": null,
+    "screenSize": 43,
+    "slug": "nordvik-n3-43-4k-uhd",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "60 Hz",
+      "HDR": "HDR10",
+      "OS": "NordOS",
+      "Upscaling": "AI 4K",
+      "HDMI": "3"
+    },
+    "stock": 12
+  },
+  {
+    "brand": "Nordvik",
+    "title": "Nordvik PureCell 50\" 4K",
+    "price": 499.99,
+    "image": "https://images.pexels.com/photos/3046581/pexels-photo-3046581.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3046581/pexels-photo-3046581.jpeg",
+      "https://images.pexels.com/photos/8135119/pexels-photo-8135119.jpeg",
+      "https://images.pexels.com/photos/7587782/pexels-photo-7587782.jpeg",
+      "https://images.pexels.com/photos/14725587/pexels-photo-14725587.jpeg"
+    ],
+    "shortDesc": "50\" PureCell panel with filtered, accurate colour",
+    "description": "PureCell places a filtering layer over the backlight that absorbs muddy wavelengths before they reach your eye. The result is colour that stays accurate when you are sitting off to the side, not just dead centre.",
+    "category": "tv",
+    "compareAtPrice": null,
+    "screenSize": 50,
+    "slug": "nordvik-purecell-50-4k",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "60 Hz",
+      "HDR": "HDR10, HLG",
+      "OS": "NordOS",
+      "Panel": "PureCell",
+      "Viewing angle": "Wide",
+      "HDMI": "4"
+    },
+    "stock": 12
+  },
+  {
+    "brand": "Nordvik",
+    "title": "Nordvik N7 55\" 4K UHD",
+    "price": 529.99,
+    "image": "https://images.pexels.com/photos/5721922/pexels-photo-5721922.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/5721922/pexels-photo-5721922.jpeg",
+      "https://images.pexels.com/photos/7546648/pexels-photo-7546648.jpeg",
+      "https://images.pexels.com/photos/7587783/pexels-photo-7587783.jpeg",
+      "https://images.pexels.com/photos/6782360/pexels-photo-6782360.jpeg"
+    ],
+    "shortDesc": "55\" 4K with AI upscaling and a slim profile",
+    "description": "The N7 sits in the sweet spot of the Nordvik range: a 55\" 4K panel, AI upscaling carried over from the PureCell line, and a chassis slim enough to sit flush on a wall bracket.",
+    "category": "tv",
+    "compareAtPrice": 662.49,
+    "screenSize": 55,
+    "slug": "nordvik-n7-55-4k-uhd",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "60 Hz",
+      "HDR": "HDR10, HLG",
+      "OS": "NordOS",
+      "Upscaling": "AI 4K",
+      "HDMI": "4"
+    },
+    "stock": 4
+  },
+  {
+    "brand": "Nordvik",
+    "title": "Nordvik QuantaLED 65\" MiniLED",
+    "price": 999.99,
+    "image": "https://images.pexels.com/photos/5721910/pexels-photo-5721910.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/5721910/pexels-photo-5721910.jpeg",
+      "https://images.pexels.com/photos/6636296/pexels-photo-6636296.jpeg",
+      "https://images.pexels.com/photos/28677646/pexels-photo-28677646.jpeg",
+      "https://images.pexels.com/photos/5721865/pexels-photo-5721865.jpeg"
+    ],
+    "shortDesc": "65\" MiniLED with thousands of dimming zones",
+    "description": "MiniLED shrinks each backlight element so thousands of them fit behind the panel. Combined with PureCell filtering, QuantaLED delivers contrast close to OLED while keeping the brightness headroom of an LED set — useful in a sunlit room.",
+    "category": "tv",
+    "compareAtPrice": null,
+    "screenSize": 65,
+    "slug": "nordvik-quantaled-65-miniled",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "120 Hz",
+      "HDR": "HDR10 Pro, HLG",
+      "OS": "NordOS",
+      "Backlight": "MiniLED",
+      "HDMI": "4 (4x HDMI 2.1)",
+      "VRR": "Yes"
+    },
+    "stock": 22
+  },
+  {
+    "brand": "Nordvik",
+    "title": "Nordvik PureCell 75\" 4K",
+    "price": 1199.99,
+    "image": "https://images.pexels.com/photos/5721928/pexels-photo-5721928.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/5721928/pexels-photo-5721928.jpeg",
+      "https://images.pexels.com/photos/7166933/pexels-photo-7166933.jpeg",
+      "https://images.pexels.com/photos/14614673/pexels-photo-14614673.jpeg",
+      "https://images.pexels.com/photos/5008383/pexels-photo-5008383.jpeg"
+    ],
+    "shortDesc": "75\" PureCell for large open-plan rooms",
+    "description": "At 75\" the viewing distance stops being a constraint and the panel quality starts to matter. PureCell filtering holds colour accuracy across the width of the screen, so nobody on the far end of the sofa gets a washed-out picture.",
+    "category": "tv",
+    "compareAtPrice": null,
+    "screenSize": 75,
+    "slug": "nordvik-purecell-75-4k",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "120 Hz",
+      "HDR": "HDR10, HLG",
+      "OS": "NordOS",
+      "Panel": "PureCell",
+      "HDMI": "4"
+    },
+    "stock": 20
+  },
+  {
+    "brand": "Nordvik",
+    "title": "Nordvik Aurora C 55\" OLED",
+    "price": 1199.99,
+    "image": "https://images.pexels.com/photos/5721905/pexels-photo-5721905.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/5721905/pexels-photo-5721905.jpeg",
+      "https://images.pexels.com/photos/8135119/pexels-photo-8135119.jpeg",
+      "https://images.pexels.com/photos/7587782/pexels-photo-7587782.jpeg",
+      "https://images.pexels.com/photos/14725587/pexels-photo-14725587.jpeg"
+    ],
+    "shortDesc": "55\" OLED with self-lit pixels and true black",
+    "description": "Every pixel in an OLED panel makes its own light and can switch off completely, which is why black looks like the screen is simply off. The Aurora C adds a 120 Hz panel and four HDMI 2.1 ports, making it as strong for gaming as for film.",
+    "category": "tv",
+    "compareAtPrice": null,
+    "screenSize": 55,
+    "slug": "nordvik-aurora-c-55-oled",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "120 Hz",
+      "HDR": "Dolby Vision, HDR10",
+      "OS": "NordOS",
+      "Panel": "OLED",
+      "Response time": "0.1 ms",
+      "HDMI": "4 (4x HDMI 2.1)",
+      "VRR": "Yes"
+    },
+    "stock": 17
+  },
+  {
+    "brand": "Nordvik",
+    "title": "Nordvik Aurora G 65\" OLED Gallery",
+    "price": 1799.99,
+    "image": "https://images.pexels.com/photos/5721916/pexels-photo-5721916.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/5721916/pexels-photo-5721916.jpeg",
+      "https://images.pexels.com/photos/7991486/pexels-photo-7991486.jpeg",
+      "https://images.pexels.com/photos/35490407/pexels-photo-35490407.jpeg",
+      "https://images.pexels.com/photos/4009398/pexels-photo-4009398.jpeg"
+    ],
+    "shortDesc": "65\" OLED that mounts flush to the wall",
+    "description": "The Aurora G ships with a flush wall mount instead of a stand — hung properly it sits against the wall like a framed print, with no gap behind it. Peak brightness is raised over the Aurora C for rooms that get real daylight.",
+    "category": "tv",
+    "compareAtPrice": 2249.99,
+    "screenSize": 65,
+    "slug": "nordvik-aurora-g-65-oled-gallery",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "120 Hz",
+      "HDR": "Dolby Vision, HDR10",
+      "OS": "NordOS",
+      "Panel": "OLED evo",
+      "Mount": "Flush wall mount included",
+      "HDMI": "4 (4x HDMI 2.1)"
+    },
+    "stock": 14
+  },
+  {
+    "brand": "Orvano",
+    "title": "Orvano O4 43\" Full HD",
+    "price": 379.99,
+    "image": "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg",
+      "https://images.pexels.com/photos/7991437/pexels-photo-7991437.jpeg",
+      "https://images.pexels.com/photos/26571198/pexels-photo-26571198.jpeg",
+      "https://images.pexels.com/photos/6487969/pexels-photo-6487969.jpeg"
+    ],
+    "shortDesc": "43\" Full HD tuned for natural skin tones",
+    "description": "Orvano calibrates every panel against a reference before it leaves the line, which shows most in faces — skin tones look like skin rather than the orange cast that untuned sets drift towards.",
+    "category": "tv",
+    "compareAtPrice": null,
+    "screenSize": 43,
+    "slug": "orvano-o4-43-full-hd",
+    "specs": {
+      "Resolution": "Full HD 1920x1080",
+      "Refresh rate": "60 Hz",
+      "HDR": "HDR10",
+      "OS": "OrvanoOS",
+      "Calibration": "Factory reference",
+      "HDMI": "3"
+    },
+    "stock": 24
+  },
+  {
+    "brand": "Orvano",
+    "title": "Orvano O6 50\" 4K HDR",
+    "price": 469.99,
+    "image": "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/6980724/pexels-photo-6980724.jpeg",
+      "https://images.pexels.com/photos/6297080/pexels-photo-6297080.jpeg",
+      "https://images.pexels.com/photos/8089078/pexels-photo-8089078.jpeg"
+    ],
+    "shortDesc": "50\" 4K HDR with TrueTone colour calibration",
+    "description": "TrueTone carries Orvano factory calibration up to 4K HDR. The filmmaker preset leaves the source untouched rather than applying motion smoothing, so films look the way they were graded.",
+    "category": "tv",
+    "compareAtPrice": null,
+    "screenSize": 50,
+    "slug": "orvano-o6-50-4k-hdr",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "60 Hz",
+      "HDR": "Dolby Vision, HDR10+",
+      "OS": "OrvanoOS",
+      "Calibration": "TrueTone",
+      "HDMI": "4"
+    },
+    "stock": 9
+  },
+  {
+    "brand": "Veltra",
+    "title": "Veltra Clarity 43\" UHD",
+    "price": 429.99,
+    "image": "https://images.unsplash.com/photo-1615210230840-69c07c13b4d1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "images": [
+      "https://images.unsplash.com/photo-1615210230840-69c07c13b4d1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.pexels.com/photos/5202917/pexels-photo-5202917.jpeg",
+      "https://images.pexels.com/photos/39332193/pexels-photo-39332193.jpeg",
+      "https://images.pexels.com/photos/36777863/pexels-photo-36777863.jpeg"
+    ],
+    "shortDesc": "43\" Clarity UHD with HDR10+ support",
+    "description": "The Clarity line is Veltra at its most practical: a 43\" 4K panel with HDR10+ dynamic metadata, so brightness is adjusted scene by scene rather than once for the whole film.",
+    "category": "tv",
+    "compareAtPrice": null,
+    "screenSize": 43,
+    "slug": "veltra-clarity-43-uhd",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "60 Hz",
+      "HDR": "HDR10+, HLG",
+      "OS": "VeltraHub",
+      "HDMI": "3"
+    },
+    "stock": 10
+  },
+  {
+    "brand": "Veltra",
+    "title": "Veltra Clarity 50\" UHD",
+    "price": 469.99,
+    "image": "https://images.pexels.com/photos/5721921/pexels-photo-5721921.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/5721921/pexels-photo-5721921.jpeg",
+      "https://images.pexels.com/photos/7123043/pexels-photo-7123043.jpeg",
+      "https://images.pexels.com/photos/7546648/pexels-photo-7546648.jpeg",
+      "https://images.pexels.com/photos/7587783/pexels-photo-7587783.jpeg"
+    ],
+    "shortDesc": "50\" Clarity UHD with dynamic HDR tone mapping",
+    "description": "Same Clarity processor as the 43\", with the extra panel area most people want in a main living room. Three HDMI inputs and a slim centre stand that does not dominate a media unit.",
+    "category": "tv",
+    "compareAtPrice": null,
+    "screenSize": 50,
+    "slug": "veltra-clarity-50-uhd",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "60 Hz",
+      "HDR": "HDR10+, HLG",
+      "OS": "VeltraHub",
+      "HDMI": "3"
+    },
+    "stock": 22
+  },
+  {
+    "brand": "Veltra",
+    "title": "Veltra Q6 43\" Quantum",
+    "price": 529.99,
+    "image": "https://images.pexels.com/photos/5721927/pexels-photo-5721927.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/5721927/pexels-photo-5721927.jpeg",
+      "https://images.pexels.com/photos/6699796/pexels-photo-6699796.jpeg",
+      "https://images.pexels.com/photos/21792101/pexels-photo-21792101.jpeg",
+      "https://images.pexels.com/photos/6580225/pexels-photo-6580225.jpeg"
+    ],
+    "shortDesc": "43\" Quantum dot panel with richer colour volume",
+    "description": "Quantum dots convert backlight into pure, narrow-band colour, so saturated reds and greens keep their intensity even at high brightness — where a conventional LED panel starts to wash out.",
+    "category": "tv",
+    "compareAtPrice": null,
+    "screenSize": 43,
+    "slug": "veltra-q6-43-quantum",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "60 Hz",
+      "HDR": "Quantum HDR, HDR10+",
+      "OS": "VeltraHub",
+      "Panel": "Quantum dot",
+      "HDMI": "4"
+    },
+    "stock": 23
+  },
+  {
+    "brand": "Veltra",
+    "title": "Veltra Clarity 65\" UHD",
+    "price": 749.99,
+    "image": "https://images.pexels.com/photos/5721904/pexels-photo-5721904.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/5721904/pexels-photo-5721904.jpeg",
+      "https://images.pexels.com/photos/6297080/pexels-photo-6297080.jpeg",
+      "https://images.pexels.com/photos/8089078/pexels-photo-8089078.jpeg",
+      "https://images.pexels.com/photos/7614416/pexels-photo-7614416.jpeg"
+    ],
+    "shortDesc": "65\" Clarity UHD for larger living rooms",
+    "description": "The largest panel in the Clarity line. At 65\" the recommended seating distance is around 2.5 m, which suits most living rooms without the screen overwhelming the space.",
+    "category": "tv",
+    "compareAtPrice": null,
+    "screenSize": 65,
+    "slug": "veltra-clarity-65-uhd",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "60 Hz",
+      "HDR": "HDR10+, HLG",
+      "OS": "VeltraHub",
+      "HDMI": "4"
+    },
+    "stock": 16
+  },
+  {
+    "brand": "Veltra",
+    "title": "Veltra Q8 65\" Quantum",
+    "price": 899.99,
+    "image": "https://images.pexels.com/photos/5721904/pexels-photo-5721904.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/5721904/pexels-photo-5721904.jpeg",
+      "https://images.pexels.com/photos/28973296/pexels-photo-28973296.jpeg",
+      "https://images.pexels.com/photos/6017141/pexels-photo-6017141.jpeg",
+      "https://images.pexels.com/photos/39338464/pexels-photo-39338464.jpeg"
+    ],
+    "shortDesc": "65\" Quantum dot with 120 Hz motion",
+    "description": "The Q8 pairs the Quantum dot layer with a 120 Hz panel, which keeps fast camera pans and live sport clean instead of smearing. Anti-glare coating helps in rooms with windows opposite the screen.",
+    "category": "tv",
+    "compareAtPrice": 1124.99,
+    "screenSize": 65,
+    "slug": "veltra-q8-65-quantum",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "120 Hz",
+      "HDR": "Quantum HDR, HDR10+",
+      "OS": "VeltraHub",
+      "Panel": "Quantum dot",
+      "Coating": "Anti-glare",
+      "HDMI": "4"
+    },
+    "stock": 21
+  },
+  {
+    "brand": "Veltra",
+    "title": "Veltra Canvas 55\" Art TV",
+    "price": 1299.99,
+    "image": "https://images.pexels.com/photos/5721908/pexels-photo-5721908.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/5721908/pexels-photo-5721908.jpeg",
+      "https://images.pexels.com/photos/9681642/pexels-photo-9681642.jpeg",
+      "https://images.pexels.com/photos/6527058/pexels-photo-6527058.jpeg",
+      "https://images.pexels.com/photos/7195720/pexels-photo-7195720.jpeg"
+    ],
+    "shortDesc": "55\" art-mode panel with a matte, paper-like finish",
+    "description": "Switched off, the Canvas shows artwork at low power behind a matte anti-reflective layer that kills the mirror effect, so it reads as a print rather than a dark rectangle. Magnetic bezels let you change the frame colour.",
+    "category": "tv",
+    "compareAtPrice": null,
+    "screenSize": 55,
+    "slug": "veltra-canvas-55-art-tv",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "120 Hz",
+      "HDR": "Quantum HDR, HDR10+",
+      "OS": "VeltraHub",
+      "Finish": "Matte anti-reflective",
+      "Art mode": "Yes",
+      "Bezel": "Interchangeable magnetic",
+      "HDMI": "4"
+    },
+    "stock": 25
+  },
+  {
+    "brand": "Veltra",
+    "title": "Veltra Neo Quantum 75\" MiniLED",
+    "price": 1999.99,
+    "image": "https://images.pexels.com/photos/5721915/pexels-photo-5721915.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/5721915/pexels-photo-5721915.jpeg",
+      "https://images.pexels.com/photos/9069368/pexels-photo-9069368.jpeg",
+      "https://images.pexels.com/photos/7214734/pexels-photo-7214734.jpeg",
+      "https://images.pexels.com/photos/5202925/pexels-photo-5202925.jpeg"
+    ],
+    "shortDesc": "75\" MiniLED with precision dimming zones",
+    "description": "Neo Quantum combines the quantum dot layer with a MiniLED backlight split into hundreds of zones. Bright objects on dark backgrounds — headlights, starfields — stay bright without a glow bleeding around them.",
+    "category": "tv",
+    "compareAtPrice": null,
+    "screenSize": 75,
+    "slug": "veltra-neo-quantum-75-miniled",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "120 Hz",
+      "HDR": "Quantum HDR 2000, HDR10+",
+      "OS": "VeltraHub",
+      "Backlight": "MiniLED",
+      "HDMI": "4 (4x HDMI 2.1)",
+      "VRR": "Yes"
+    },
+    "stock": 20
+  },
+  {
+    "brand": "Veltra",
+    "title": "Veltra Q9 85\" Quantum",
+    "price": 2499.99,
+    "image": "https://images.pexels.com/photos/5721901/pexels-photo-5721901.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/5721901/pexels-photo-5721901.jpeg",
+      "https://images.pexels.com/photos/21792101/pexels-photo-21792101.jpeg",
+      "https://images.pexels.com/photos/6580225/pexels-photo-6580225.jpeg",
+      "https://images.pexels.com/photos/13806260/pexels-photo-13806260.jpeg"
+    ],
+    "shortDesc": "85\" Quantum flagship for home cinema rooms",
+    "description": "At 85\" this is a home-cinema panel rather than a living-room one — plan for at least 3.2 m of viewing distance and check that your wall bracket is rated for 45 kg before ordering.",
+    "category": "tv",
+    "compareAtPrice": null,
+    "screenSize": 85,
+    "slug": "veltra-q9-85-quantum",
+    "specs": {
+      "Resolution": "4K UHD 3840x2160",
+      "Refresh rate": "120 Hz",
+      "HDR": "Quantum HDR, HDR10+",
+      "OS": "VeltraHub",
+      "Panel": "Quantum dot",
+      "Weight": "45 kg with stand",
+      "HDMI": "4 (4x HDMI 2.1)"
+    },
+    "stock": 5
+  }
+]

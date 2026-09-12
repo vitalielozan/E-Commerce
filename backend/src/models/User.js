@@ -3,26 +3,34 @@ import bcrypt from 'bcryptjs';
 
 const UserSchema = new mongoose.Schema(
   {
-    fullName: { type: String, required: true },
-    email: { type: String, required: true, unique: true },
-    password: { type: String, required: true },
+    fullName: { type: String, required: true, trim: true, maxlength: 80 },
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+      lowercase: true,
+      trim: true,
+    },
+    // select:false — parola nu iese niciodată dintr-un query obișnuit.
+    password: { type: String, required: true, select: false },
+    role: { type: String, enum: ['user', 'admin'], default: 'user' },
     lastCheckout: {
       billingAddress: { type: String },
       shippingAddress: { type: String },
-      cardLast4: { type: Number },
+      cardLast4: { type: String },
       date: { type: Date },
     },
   },
   { timestamps: true }
 );
 
-UserSchema.pre('save', async function (next) {
-  if (!this.isModified('password')) return next();
-  this.password = await bcrypt.hash(this.password, 10);
+UserSchema.pre('save', async function () {
+  if (!this.isModified('password')) return;
+  this.password = await bcrypt.hash(this.password, 12);
 });
 
 UserSchema.methods.comparePassword = async function (candidatePassword) {
-  return await bcrypt.compare(candidatePassword, this.password);
+  return bcrypt.compare(candidatePassword, this.password);
 };
 
 const User = mongoose.model('User', UserSchema);

@@ -5,30 +5,32 @@ export const API_PATHS = {
   AUTH: {
     REGISTER: '/auth/register',
     LOGIN: '/auth/login',
-    UPDATE_CHECK_OUT: '/auth/update',
-    GET_USER_INFO: '/auth/getUser'
+    ME: '/auth/me',
+    CHECKOUT_PREFS: '/auth/checkout-prefs'
   },
-  PRODUCT: {
-    GET_ALL_PRODUCTS: '/products/get',
-    GET_RAW_PRODUCTS: '/products/raw',
-    GET_PRODUCT_BRAND: (brand) => `/products/brand/${brand}`,
-    GET_PRODUCT: (productId) => `/products/${productId}`
+  PRODUCTS: {
+    LIST: '/products',
+    FACETS: '/products/facets',
+    BY_BRAND: (brand) => `/products/brand/${encodeURIComponent(brand)}`,
+    DETAIL: (id) => `/products/${id}`,
+    RELATED: (id) => `/products/${id}/related`
   },
   CART: {
-    ADD_TO_CART: '/cart/add',
-    GET_ALL_FROM_CART: '/cart/get',
-    CLEAR_CART: '/cart/cart',
-    DELETE_FROM_CART: (productId) => `/cart/${productId}`
+    ROOT: '/cart',
+    ITEM: (id) => `/cart/${id}`
   },
-  FAVORITE: {
-    ADD_TO_FAVORITE: '/favorite/add',
-    ADD_TO_CART_FROM_FAV: '/favorite/to-cart',
-    GET_ALL_FROM_FAVORITE: '/favorite/get',
-    DELETE_FROM_FAVORITE: (productId) => `/favorite/${productId}`
+  FAVORITES: {
+    ROOT: '/favorites',
+    TO_CART: '/favorites/to-cart',
+    ITEM: (id) => `/favorites/${id}`
   },
   REVIEWS: {
-    ADD_REVIEW: '/reviews/add',
-    GET_REVIEW: (productId) => `/reviews/${productId}`,
-    DELETE_REVIEW: (reviewId) => `/reviews/${reviewId}`
+    ROOT: '/reviews',
+    FOR_PRODUCT: (productId) => `/reviews/${productId}`,
+    ITEM: (reviewId) => `/reviews/${reviewId}`
+  },
+  ORDERS: {
+    ROOT: '/orders',
+    DETAIL: (id) => `/orders/${id}`
   }
 };

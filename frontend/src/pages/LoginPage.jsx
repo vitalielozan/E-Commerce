@@ -1,23 +1,31 @@
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import CustomInput from '../components/CustomInput.jsx';
-import { validateEmail } from '../services/helper.js';
-import axiosInstance from '../services/axiosInstance.js';
-import { API_PATHS } from '../services/apiPaths.js';
-import { useAuthContext } from '../hooks/useAuthContext.js';
-import AuthLayout from '../layout/AuthLayout.jsx';
+import { useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Loader2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
+import AuthLayout from '../layout/AuthLayout.jsx';
+import PasswordInput from '../components/PasswordInput.jsx';
+import { validateEmail } from '../services/helper.js';
+import { apiErrorMessage } from '../services/axiosInstance.js';
+import { useAuthContext } from '../hooks/useAuthContext.js';
+import { usePageMeta } from '../hooks/usePageMeta.js';
+
 function LoginPage() {
+  const { t } = useTranslation();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { signIn } = useAuthContext();
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
-  const { updateUser } = useAuthContext();
-  const navigate = useNavigate();
-  const { t } = useTranslation();
+  const [submitting, setSubmitting] = useState(false);
 
-  const handleLogin = async (e) => {
-    e.preventDefault();
+  usePageMeta({ title: t('auth.signInTitle') });
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+
     if (!validateEmail(email)) {
       setError(t('auth.errors.invalidEmail'));
       return;
@@ -26,69 +34,88 @@ function LoginPage() {
       setError(t('auth.errors.enterPassword'));
       return;
     }
-    setError('');
-    // Login API Call
+
+    setError(null);
+    setSubmitting(true);
+
     try {
-      const response = await axiosInstance.post(API_PATHS.AUTH.LOGIN, {
-        email,
-        password
-      });
-      const { token, user } = response.data;
-      if (token) {
-        localStorage.setItem('token', token);
-        updateUser(user);
-      }
-    } catch (error) {
-      if (error.response && error.response.data.message) {
-        setError(error.response.data.message);
-      } else {
-        setError(t('auth.errors.generic'));
-      }
+      await signIn({ email, password });
+      // Revenim acolo unde utilizatorul voia să ajungă, nu mereu pe pagina
+      // de start.
+      navigate(location.state?.from ?? '/', { replace: true });
+    } catch (err) {
+      setError(apiErrorMessage(err, t('auth.errors.generic')));
+      setSubmitting(false);
     }
   };
 
   return (
-    <AuthLayout>
-      <div className="flex h-3/4 flex-col justify-center md:h-full lg:w-[70%]">
-        <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100">
-          {t('auth.welcomeBack')}
-        </h3>
-        <p className="mt-[5px] mb-6 text-xs text-gray-700 dark:text-gray-400">
-          {t('auth.loginSubtitle')}
-        </p>
-
-        <form onSubmit={handleLogin}>
-          <CustomInput
+    <AuthLayout
+      title={t('auth.welcomeBack')}
+      subtitle={t('auth.loginSubtitle')}
+    >
+      <form onSubmit={onSubmit} className="space-y-4" noValidate>
+        <div>
+          <label htmlFor="email" className="mb-1.5 block text-sm font-medium">
+            {t('auth.emailAddress')}
+          </label>
+          <input
+            id="email"
+            type="email"
+            autoComplete="email"
             value={email}
-            onChange={({ target }) => setEmail(target.value)}
-            label={t('auth.emailAddress')}
-            placeholder="john@example.com"
-            type="text"
+            onChange={(event) => setEmail(event.target.value)}
+            placeholder="ana@example.com"
+            className="w-full rounded-lg px-3 py-2.5 text-sm outline-none"
+            style={{
+              backgroundColor: 'var(--surface-sunken)',
+              color: 'var(--text-primary)',
+            }}
           />
-          <CustomInput
-            value={password}
-            onChange={({ target }) => setPassword(target.value)}
-            label={t('auth.password')}
-            placeholder={t('auth.minChars')}
-            type="password"
-          />
-          {error && <p className="pb-2.5 text-xs text-red-500">{error}</p>}
-          <button
-            type="submit"
-            title="Login"
-            className="btn"
-            onClick={() => navigate('/')}
+        </div>
+
+        <PasswordInput
+          id="password"
+          label={t('auth.password')}
+          value={password}
+          onChange={setPassword}
+          autoComplete="current-password"
+        />
+
+        {error && (
+          <p
+            role="alert"
+            className="text-sm"
+            style={{ color: 'var(--color-signal-alert)' }}
           >
-            {t('auth.login')}
-          </button>
-          <p className="mt-3 text-[13px] text-gray-700 dark:text-gray-400">
-            {t('auth.noAccount')}{' '}
-            <Link className="font-medium text-blue-600 underline" to="/signup">
-              {t('auth.signUp')}
-            </Link>
+            {error}
           </p>
-        </form>
-      </div>
+        )}
+
+        <button
+          type="submit"
+          disabled={submitting}
+          className="flex w-full items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold disabled:opacity-60"
+          style={{
+            backgroundColor: 'var(--color-ember-400)',
+            color: 'var(--color-ink-950)',
+          }}
+        >
+          {submitting && <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />}
+          {t('auth.signInAction')}
+        </button>
+
+        <p className="text-secondary text-sm">
+          {t('auth.noAccount')}{' '}
+          <Link
+            to="/signup"
+            className="font-semibold"
+            style={{ color: 'var(--color-ember-500)' }}
+          >
+            {t('auth.signUpLink')}
+          </Link>
+        </p>
+      </form>
     </AuthLayout>
   );
 }

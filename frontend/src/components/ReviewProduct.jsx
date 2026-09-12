@@ -1,177 +1,209 @@
-import React, { useState, useEffect } from 'react';
-import { useAuthContext } from '../hooks/useAuthContext.js';
-import { Star as StarIcon, Trash2 } from 'lucide-react';
-import { Button, Form } from '@heroui/react';
-import { Textarea } from '@heroui/input';
-import { maskEmail } from '../services/helper.js';
-import axiosInstance from '../services/axiosInstance.js';
-import { API_PATHS } from '../services/apiPaths.js';
+import { useEffect, useState } from 'react';
+import { Star, Trash2, Loader2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { toast } from 'react-toastify';
 
-function ReviewProduct({ productId }) {
-  const { t } = useTranslation();
+import Rating from './Rating.jsx';
+import { reviewsApi } from '../services/api.js';
+import { apiErrorMessage } from '../services/axiosInstance.js';
+import { formatDate } from '../services/format.js';
+import { useAuthContext } from '../hooks/useAuthContext.js';
+
+function ReviewProduct({ productId, onRatingChange }) {
+  const { t, i18n } = useTranslation();
   const { user } = useAuthContext();
-  const [comment, setComment] = useState('');
-  const [rating, setRating] = useState(5);
+
   const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [submitting, setSubmitting] = useState(false);
+  const [comment, setComment] = useState('');
+  const [rating, setRating] = useState(5);
 
   useEffect(() => {
-    const fetchReviews = async () => {
-      try {
-        const response = await axiosInstance.get(
-          API_PATHS.REVIEWS.GET_REVIEW(productId)
-        );
-        setReviews(response.data);
-      } catch (error) {
-        console.error('Failed to fetch reviews', error.message);
-      } finally {
-        setLoading(false);
-      }
+    let active = true;
+    setLoading(true);
+
+    reviewsApi
+      .forProduct(productId)
+      .then((data) => active && setReviews(data))
+      .catch(() => active && setReviews([]))
+      .finally(() => active && setLoading(false));
+
+    return () => {
+      active = false;
     };
-    fetchReviews();
   }, [productId]);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (!user) return;
-    const newReview = {
-      productId,
-      comment,
-      rating
-    };
+  // Recenzia proprie: serverul permite doar una per produs, deci formularul
+  // se transformă în „șterge recenzia" odată ce există.
+  const myReview = user
+    ? reviews.find((review) => review.user?._id === user._id)
+    : null;
+
+  const submit = async (event) => {
+    event.preventDefault();
+    if (!comment.trim()) return;
+
+    setSubmitting(true);
     try {
-      const response = await axiosInstance.post(
-        API_PATHS.REVIEWS.ADD_REVIEW,
-        newReview
-      );
-      const savedReview = response.data;
-      setReviews((prev) => [savedReview, ...prev]);
+      const saved = await reviewsApi.add({ productId, comment, rating });
+      setReviews((prev) => [saved, ...prev]);
       setComment('');
       setRating(5);
+      onRatingChange?.();
+      toast.success(t('reviews.published'));
     } catch (error) {
-      console.error('Error adding review:', error);
+      toast.error(apiErrorMessage(error, t('reviews.failed')));
+    } finally {
+      setSubmitting(false);
     }
   };
 
-  const myReview = reviews.find((r) => r.user._id === user._id);
-
-  const handleRemovereview = async (reviewId) => {
+  const remove = async (reviewId) => {
     try {
-      await axiosInstance.delete(API_PATHS.REVIEWS.DELETE_REVIEW(reviewId));
-      const response = await axiosInstance.get(
-        API_PATHS.REVIEWS.GET_REVIEW(productId)
-      );
-      setReviews(response.data);
+      await reviewsApi.remove(reviewId);
+      setReviews((prev) => prev.filter((review) => review._id !== reviewId));
+      onRatingChange?.();
+      toast.success(t('reviews.deleted'));
     } catch (error) {
-      console.error('Error deleting review:', error);
+      toast.error(apiErrorMessage(error, t('reviews.failed')));
     }
   };
 
   return (
-    <div className="w-full">
-      <h2 className="mb-4 text-xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">
+    <section aria-labelledby="reviews-heading" className="space-y-5">
+      <h2 id="reviews-heading" className="font-display text-xl font-semibold">
         {t('reviews.title')}
+        {reviews.length > 0 && (
+          <span className="text-muted ml-2 text-base font-normal">
+            ({reviews.length})
+          </span>
+        )}
       </h2>
 
       {user ? (
-        <Form
-          onSubmit={handleSubmit}
-          className="mb-6 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-700 dark:bg-slate-900"
-        >
-          <Textarea
-            value={comment}
-            onChange={(e) => setComment(e.target.value)}
-            placeholder={t('reviews.writeComment')}
-            required
-            variant="faded"
-            className="w-full"
-          />
-
-          <div className="flex items-center space-x-2">
-            {[1, 2, 3, 4, 5].map((star) => (
-              <StarIcon
-                key={star}
-                className={`h-6 w-6 cursor-pointer transition-colors ${
-                  star <= rating
-                    ? 'text-yellow-400'
-                    : 'text-gray-300 dark:text-gray-600'
-                }`}
-                onClick={() => setRating(star)}
-              />
-            ))}
-            <span className="text-sm text-slate-600 dark:text-slate-400">
-              {t('reviews.stars', { count: rating })}
-            </span>
-          </div>
-
-          {!myReview ? (
-            <Button
-              type="submit"
-              className="rounded-xl bg-slate-900 px-8 py-3 text-white shadow-sm transition-colors hover:bg-sky-700 dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-sky-300"
-              fullWidth
-            >
-              {t('reviews.send')}
-            </Button>
-          ) : (
-            <Button
-              className="my-2 rounded-xl bg-red-600 px-8 py-3 text-white shadow-sm transition-colors hover:bg-red-700"
-              fullWidth
-              onPress={() => handleRemovereview(myReview._id)}
-            >
-              <Trash2 className="h-5 w-5" />
-            </Button>
-          )}
-        </Form>
-      ) : (
-        <p className="mb-4 text-base text-slate-500 italic dark:text-slate-400">
-          {t('reviews.mustLogin')}
-        </p>
-      )}
-
-      <div className="space-y-4">
-        {loading ? (
-          <p className="text-slate-500 italic">{t('reviews.loading')}</p>
-        ) : reviews.length === 0 ? (
-          <p className="text-base text-slate-400 italic dark:text-slate-500">
-            {t('reviews.empty')}
-          </p>
+        myReview ? (
+          <p className="text-secondary text-sm">{t('reviews.alreadyReviewed')}</p>
         ) : (
-          reviews.map((review, indx) => (
-            <div
-              key={indx}
-              className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-700 dark:bg-slate-900"
-            >
-              <div className="mb-1 flex items-center justify-between">
-                <span className="me-2 font-semibold text-slate-800 dark:text-slate-100">
-                  {typeof review?.user?.email === 'string'
-                    ? maskEmail(review.user.email)
-                    : t('common.anonymous')}
-                </span>
-                <span className="text-sm text-slate-400 dark:text-slate-500">
-                  {new Date(review.createdAt).toLocaleDateString()}
-                </span>
-              </div>
-              <div className="mb-2 flex items-center">
+          <form onSubmit={submit} className="surface-panel space-y-4 p-4">
+            <fieldset>
+              <legend className="mb-2 text-sm font-medium">
+                {t('reviews.yourRating')}
+              </legend>
+              <div className="flex gap-1">
                 {[1, 2, 3, 4, 5].map((star) => (
-                  <StarIcon
+                  <button
                     key={star}
-                    className={`h-5 w-5 ${
-                      star <= review.rating
-                        ? 'text-yellow-400'
-                        : 'text-gray-300 dark:text-gray-600'
-                    }`}
-                  />
+                    type="button"
+                    onClick={() => setRating(star)}
+                    aria-label={t('reviews.starLabel', { count: star })}
+                    aria-pressed={rating === star}
+                    className="rounded p-1"
+                  >
+                    <Star
+                      className="h-6 w-6"
+                      style={{
+                        color:
+                          star <= rating
+                            ? 'var(--color-ember-400)'
+                            : 'var(--border-hairline)',
+                      }}
+                      fill={star <= rating ? 'currentColor' : 'none'}
+                    />
+                  </button>
                 ))}
               </div>
-              <p className="text-slate-700 dark:text-slate-300">
+            </fieldset>
+
+            <div>
+              <label htmlFor="review-comment" className="mb-2 block text-sm font-medium">
+                {t('reviews.yourReview')}
+              </label>
+              <textarea
+                id="review-comment"
+                value={comment}
+                onChange={(event) => setComment(event.target.value)}
+                rows={3}
+                required
+                minLength={3}
+                maxLength={1000}
+                placeholder={t('reviews.placeholder')}
+                className="w-full rounded-lg p-3 text-sm outline-none"
+                style={{
+                  backgroundColor: 'var(--surface-sunken)',
+                  color: 'var(--text-primary)',
+                }}
+              />
+            </div>
+
+            <button
+              type="submit"
+              disabled={submitting || !comment.trim()}
+              className="flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold disabled:opacity-50"
+              style={{
+                backgroundColor: 'var(--color-ember-400)',
+                color: 'var(--color-ink-950)',
+              }}
+            >
+              {submitting && <Loader2 className="h-4 w-4 animate-spin" />}
+              {t('reviews.publish')}
+            </button>
+          </form>
+        )
+      ) : (
+        <p className="text-secondary text-sm">{t('reviews.signInToReview')}</p>
+      )}
+
+      {loading ? (
+        <div className="space-y-3" aria-hidden="true">
+          {[0, 1].map((i) => (
+            <div key={i} className="surface-panel space-y-2 p-4">
+              <div className="skeleton h-4 w-32 rounded" />
+              <div className="skeleton h-3 w-full rounded" />
+            </div>
+          ))}
+        </div>
+      ) : reviews.length === 0 ? (
+        <p className="text-muted text-sm">{t('reviews.empty')}</p>
+      ) : (
+        <ul className="space-y-3" role="list">
+          {reviews.map((review) => (
+            <li key={review._id} className="surface-panel p-4">
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <span className="text-sm font-semibold">
+                  {review.user?.fullName || t('common.anonymous')}
+                </span>
+                <time
+                  className="text-muted text-xs"
+                  dateTime={review.createdAt}
+                >
+                  {formatDate(review.createdAt, i18n.language)}
+                </time>
+              </div>
+
+              <div className="mt-1.5">
+                <Rating value={review.rating} count={1} showCount={false} />
+              </div>
+
+              <p className="text-secondary mt-2 text-sm leading-relaxed">
                 {review.comment}
               </p>
-            </div>
-          ))
-        )}
-      </div>
-    </div>
+
+              {myReview?._id === review._id && (
+                <button
+                  type="button"
+                  onClick={() => remove(review._id)}
+                  className="text-muted mt-3 flex items-center gap-1.5 text-xs font-medium hover:text-[var(--color-signal-alert)]"
+                >
+                  <Trash2 className="h-3.5 w-3.5" aria-hidden="true" />
+                  {t('reviews.delete')}
+                </button>
+              )}
+            </li>
+          ))}
+        </ul>
+      )}
+    </section>
   );
 }
 

@@ -1,97 +1,62 @@
-import React, { useEffect } from 'react';
-import MotionDiv from '../components/MotionDiv.jsx';
-import EmptyMasage from '../components/EmptyMasage.jsx';
-import { ShoppingCart, Trash2 } from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Heart } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+
+import ProductCard from '../components/ProductCard.jsx';
+import EmptyState from '../components/EmptyState.jsx';
+import { ProductGridSkeleton } from '../components/Skeletons.jsx';
 import { useCartFav } from '../hooks/useCartFav.js';
 import { useAuthContext } from '../hooks/useAuthContext.js';
-import { toast } from 'react-toastify';
-import { useUserAuth } from '../hooks/useUserAuth.js';
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Button,
-  Image
-} from '@heroui/react';
-import { useTranslation } from 'react-i18next';
+import { usePageMeta } from '../hooks/usePageMeta.js';
 
 function FavoritesPage() {
   const { t } = useTranslation();
-  useUserAuth();
-  const navigate = useNavigate();
-  const { carts, favorites, addFromFavoriteToCart, removeFromFavorites } =
-    useCartFav();
-  const { user, isLoading } = useAuthContext();
-  useEffect(() => {
-    if (!user && !isLoading) {
-      navigate('/login', { replace: true });
-    }
-  }, [navigate, user, isLoading]);
+  const { user, isLoading: authLoading } = useAuthContext();
+  const { favorites, isLoading } = useCartFav();
 
-  const handleAddToCartFromFavorite = (product) => {
-    if (carts.some((item) => item.product._id === product._id)) {
-      toast.warning(t('favorites.alreadyInCart'));
-      return;
-    }
-    addFromFavoriteToCart(product._id);
-  };
+  usePageMeta({ title: t('favorites.title') });
+
+  if (authLoading || isLoading) return <ProductGridSkeleton count={4} />;
+
+  if (!user) {
+    return (
+      <EmptyState
+        icon={Heart}
+        title={t('favorites.signInTitle')}
+        description={t('favorites.signInHint')}
+        actionLabel={t('nav.signIn')}
+        actionTo="/login"
+      />
+    );
+  }
+
+  if (favorites.length === 0) {
+    return (
+      <EmptyState
+        icon={Heart}
+        title={t('favorites.empty')}
+        description={t('favorites.emptyHint')}
+        actionLabel={t('cart.startShopping')}
+        actionTo="/shop"
+      />
+    );
+  }
+
   return (
-    <div className="p-3 text-center">
-      <h1 className="mb-6 text-4xl font-bold">{t('favorites.title')}</h1>
-      {favorites.length === 0 ? (
-        <EmptyMasage imageSrc="/favorite.png" message={t('favorites.empty')} />
-      ) : (
-        <MotionDiv>
-          <div className="grid grid-cols-1 items-stretch gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            {favorites.map((item) => {
-              return (
-                <Card
-                  key={item.product._id}
-                  className="w-full bg-white/80 shadow-xl transition-shadow duration-200 hover:shadow-2xl dark:bg-gray-900/80"
-                >
-                  <Link to={`/products/${item.product._id}`}>
-                    <CardHeader className="cursor-pointer p-0">
-                      <Image
-                        isZoomed
-                        src={item.product.image}
-                        alt={item.product.title}
-                        className="mx-auto h-48 w-full rounded-t object-cover px-10"
-                      />
-                    </CardHeader>
-                  </Link>
-                  <CardBody className="space-y-2 p-4">
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                      {item.product.title}
-                    </h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">
-                      {item.product.shortDesc}
-                    </p>
-                    <p className="text-md font-bold text-indigo-600">
-                      ${item.product.price}
-                    </p>
-                  </CardBody>
-                  <CardFooter className="justify-around">
-                    <Button
-                      onPress={() => handleAddToCartFromFavorite(item.product)}
-                      className="rounded-full bg-gray-900 px-4 py-2 text-white shadow hover:scale-105"
-                    >
-                      <ShoppingCart className="h-5 w-5" />
-                    </Button>
-                    <Button
-                      onPress={() => removeFromFavorites(item._id)}
-                      className="rounded-full bg-red-600 px-4 py-2 text-white shadow hover:scale-105"
-                    >
-                      <Trash2 className="h-5 w-5" />
-                    </Button>
-                  </CardFooter>
-                </Card>
-              );
-            })}
-          </div>
-        </MotionDiv>
-      )}
+    <div className="space-y-6">
+      <h1 className="font-display text-2xl font-bold md:text-3xl">
+        {t('favorites.title')}
+        <span className="text-muted ml-2 text-lg font-normal">
+          ({favorites.length})
+        </span>
+      </h1>
+
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        {favorites
+          .filter((favorite) => favorite.product)
+          .map((favorite) => (
+            <ProductCard key={favorite._id} product={favorite.product} />
+          ))}
+      </div>
     </div>
   );
 }

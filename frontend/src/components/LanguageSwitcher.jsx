@@ -1,52 +1,34 @@
-import React from 'react';
-import {
-  Dropdown,
-  DropdownTrigger,
-  DropdownMenu,
-  DropdownItem,
-  Button
-} from '@heroui/react';
 import { useTranslation } from 'react-i18next';
 
-function LanguageSwitcher({ className = '' }) {
+const LANGUAGES = [
+  { code: 'en', label: 'English', short: 'EN' },
+  { code: 'ro', label: 'Română', short: 'RO' },
+  { code: 'de', label: 'Deutsch', short: 'DE' }
+];
+
+/**
+ * Un <select> nativ: pe mobil deschide selectorul sistemului, e navigabil de
+ * la tastatură fără cod suplimentar și nu are nevoie de gestionare de focus.
+ */
+function LanguageSwitcher() {
   const { i18n, t } = useTranslation();
-  const language = ['en', 'de', 'ro'].includes(i18n.language)
-    ? i18n.language
-    : 'en';
-
-  const languageLabelMap = {
-    en: 'English',
-    de: 'Deutsch',
-    ro: 'Română'
-  };
-
-  const handleLanguageChange = (selected) => {
-    if (selected instanceof Set) {
-      const selectedLang = Array.from(selected)[0];
-      i18n.changeLanguage(String(selectedLang));
-    }
-  };
+  const current = i18n.language?.split('-')[0] ?? 'en';
 
   return (
-    <Dropdown backdrop="blur">
-      <DropdownTrigger>
-        <Button className={`capitalize ${className}`} variant="bordered">
-          {languageLabelMap[language]}
-        </Button>
-      </DropdownTrigger>
-      <DropdownMenu
-        disallowEmptySelection
-        aria-label={t('nav.language')}
-        selectedKeys={new Set([language])}
-        selectionMode="single"
-        className="bg-transparent!"
-        onSelectionChange={handleLanguageChange}
+    <label className="relative">
+      <span className="sr-only">{t('nav.language')}</span>
+      <select
+        value={current}
+        onChange={(event) => i18n.changeLanguage(event.target.value)}
+        className="text-secondary cursor-pointer appearance-none rounded-md bg-transparent px-3 py-2 text-sm font-medium hover:text-[var(--text-primary)]"
       >
-        <DropdownItem key="en">English</DropdownItem>
-        <DropdownItem key="de">Deutsch</DropdownItem>
-        <DropdownItem key="ro">Română</DropdownItem>
-      </DropdownMenu>
-    </Dropdown>
+        {LANGUAGES.map((lang) => (
+          <option key={lang.code} value={lang.code}>
+            {lang.short}
+          </option>
+        ))}
+      </select>
+    </label>
   );
 }
 

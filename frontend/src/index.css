@@ -1,27 +1,150 @@
 @import 'tailwindcss';
 
-@plugin './hero.ts';
-
-@source '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
-
 @custom-variant dark (&:is(.dark *));
 
+/*
+  TV-Maxx — sistem vizual.
+
+  Ideea conducătoare e showroom-ul: un magazin de televizoare își coboară
+  lumina ca ecranele să rămână lucrul cel mai luminos din încăpere. De aici
+  vin neutrele reci (un panou stins nu e gri-cald, e albastru-închis) și
+  accentul chihlimbar, care e lumina camerei, nu a ecranului. Albastrul-
+  corporate pe care îl folosește orice magazin de electronice e evitat
+  intenționat.
+*/
+@theme {
+  /* Neutre reci — temperatura unui panou stins. */
+  --color-ink-950: #070a0f;
+  --color-ink-900: #0b1017;
+  --color-ink-800: #131a25;
+  --color-ink-700: #1d2635;
+  --color-ink-600: #2b3648;
+  --color-ink-500: #4a586e;
+  --color-ink-400: #6b7a92;
+  --color-ink-300: #94a1b6;
+  --color-ink-200: #c2cbd8;
+  --color-ink-100: #e2e7ee;
+  --color-ink-50: #f2f5f8;
+
+  /* Chihlimbar — lumina caldă din încăpere, nu de pe ecran. */
+  --color-ember-600: #b45f0c;
+  --color-ember-500: #d97d15;
+  --color-ember-400: #f2a33c;
+  --color-ember-300: #f7bd6e;
+  --color-ember-200: #fbd9a8;
+
+  /* Semnale de stare, folosite doar ca semnale. */
+  --color-signal-stock: #1f9e6b;
+  --color-signal-alert: #d94f4f;
+
+  --font-display: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Public Sans', ui-sans-serif, system-ui, sans-serif;
+
+  /* Raportul ecranului e proporția care organizează paginile. */
+  --aspect-screen: 16 / 9;
+
+  --radius-panel: 0.875rem;
+}
+
 @layer base {
+  :root {
+    --surface-page: var(--color-ink-50);
+    --surface-panel: #ffffff;
+    --surface-sunken: var(--color-ink-100);
+    --border-hairline: var(--color-ink-200);
+    --text-primary: var(--color-ink-900);
+    --text-secondary: var(--color-ink-500);
+    --text-muted: var(--color-ink-400);
+  }
+
+  .dark {
+    --surface-page: var(--color-ink-950);
+    --surface-panel: var(--color-ink-900);
+    --surface-sunken: var(--color-ink-800);
+    --border-hairline: var(--color-ink-700);
+    --text-primary: var(--color-ink-50);
+    --text-secondary: var(--color-ink-300);
+    --text-muted: var(--color-ink-400);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
   body {
-    @apply bg-slate-50 text-slate-800 antialiased dark:bg-slate-950 dark:text-slate-100;
+    background-color: var(--surface-page);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    font-synthesis-weight: none;
+    -webkit-font-smoothing: antialiased;
   }
 
   #root {
-    @apply min-h-screen;
+    min-height: 100vh;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  /* Focus vizibil peste tot, inclusiv pe componentele HeroUI. */
+  :focus-visible {
+    outline: 2px solid var(--color-ember-400);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
 @layer components {
-  .input-box {
-    @apply mt-3 mb-4 flex w-full justify-between gap-3 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 transition-colors outline-none focus-within:border-sky-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100;
+  .surface-panel {
+    background-color: var(--surface-panel);
+    border: 1px solid var(--border-hairline);
+    border-radius: var(--radius-panel);
   }
 
-  .btn {
-    @apply my-1 w-full rounded-xl bg-sky-600 p-2.5 text-sm font-medium text-white shadow-md shadow-sky-600/20 transition-colors hover:bg-sky-700 dark:bg-sky-700 dark:hover:bg-sky-600;
+  /* Cifrele tehnice (diagonală, preț, rating) aliniate în coloană: la un
+     catalog de televizoare specificațiile se compară pe verticală. */
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .text-secondary {
+    color: var(--text-secondary);
+  }
+
+  .text-muted {
+    color: var(--text-muted);
+  }
+
+  /* Placeholder de încărcare. Pulsul e oprit pentru prefers-reduced-motion
+     de regula globală de mai sus. */
+  .skeleton {
+    background-color: var(--surface-sunken);
+    animation: skeleton-pulse 1.6s ease-in-out infinite;
+  }
+
+  @keyframes skeleton-pulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.55;
+    }
   }
 }

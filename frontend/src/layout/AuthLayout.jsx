@@ -1,31 +1,58 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import ThemeToggle from '../components/ThemeToggle.jsx';
-import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from '../components/LanguageSwitcher.jsx';
 
-function AuthLayout({ children }) {
-  const { t } = useTranslation();
-
+/**
+ * Cadrul paginilor de autentificare.
+ *
+ * Panoul din dreapta e o suprafață închisă, fără fotografie de stock: pe un
+ * ecran de autentificare imaginea nu aduce nimic, iar formularul rămâne
+ * singurul lucru de făcut acolo.
+ */
+function AuthLayout({ title, subtitle, children }) {
   return (
-    <div className="flex">
-      <div className="h-screen w-screen bg-gray-100/50 px-12 pt-8 pb-12 text-gray-900 md:w-[60vw] dark:bg-gray-800/50 dark:text-gray-300">
-        <h3 className="text-lg font-medium text-gray-900 dark:text-gray-300">
-          TV-Maxx
-        </h3>
-        <ThemeToggle />
-        {children}
-      </div>
-      <div className="bg-auth-bg-img relative hidden h-screen w-[40vw] overflow-hidden bg-blue-100 bg-cover bg-center bg-no-repeat p-8 md:block dark:bg-sky-900">
-        <div className="absolute -top-7 -left-5 h-48 w-48 rounded-[40px] bg-blue-500" />
-        <div className="absolute top-[30%] -right-10 h-56 w-48 rounded-[40px] border-20 border-cyan-600" />
-        <div className="absolute top-[25%] right-15">
-          <h1 className="text-3xl font-semibold">{t('auth.sideTitle')}</h1>
+    <div className="flex min-h-screen">
+      <div className="flex w-full flex-col px-6 py-8 md:w-[55%] md:px-12">
+        <div className="flex items-center justify-between">
+          <Link to="/" className="font-display text-lg font-bold">
+            TV<span style={{ color: 'var(--color-ember-400)' }}>-</span>Maxx
+          </Link>
+          <div className="flex items-center gap-1">
+            <ThemeToggle />
+            <LanguageSwitcher />
+          </div>
         </div>
-        <div className="absolute -bottom-7 -left-5 h-56 w-48 rounded-[40px] bg-sky-700" />
 
-        <img
-          src="./card2.jpg"
-          alt="Grafic Trend"
-          className="absolute bottom-20 w-56 rounded-xl shadow-lg shadow-blue-400/15 lg:w-[90%]"
+        <div className="mx-auto flex w-full max-w-sm flex-1 flex-col justify-center py-10">
+          <h1 className="font-display text-2xl font-bold">{title}</h1>
+          {subtitle && (
+            <p className="text-secondary mt-1.5 mb-6 text-sm">{subtitle}</p>
+          )}
+          {children}
+        </div>
+      </div>
+
+      <div
+        className="relative hidden overflow-hidden md:block md:w-[45%]"
+        style={{ backgroundColor: 'var(--color-ink-900)' }}
+        aria-hidden="true"
+      >
+        {/* Dreptunghiuri în raport 16:9, suprapuse: forma unui perete de
+            ecrane dintr-un showroom, redusă la geometrie. */}
+        <div
+          className="absolute top-[18%] left-[12%] aspect-[16/9] w-[55%] rounded-lg"
+          style={{ backgroundColor: 'var(--color-ink-800)' }}
+        />
+        <div
+          className="absolute top-[38%] left-[28%] aspect-[16/9] w-[62%] rounded-lg"
+          style={{ backgroundColor: 'var(--color-ink-700)' }}
+        />
+        <div
+          className="absolute top-[58%] left-[16%] aspect-[16/9] w-[48%] rounded-lg"
+          style={{
+            backgroundColor: 'var(--color-ember-400)',
+            opacity: 0.9
+          }}
         />
       </div>
     </div>

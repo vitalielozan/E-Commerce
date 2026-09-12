@@ -1,19 +1,24 @@
-import extress from 'express';
+import express from 'express';
 import { protect } from '../middleware/authMiddleware.js';
-import * as cartController from '../controllers/cartControler.js';
-
-const {
-  getProductsFromCart,
+import { validate } from '../middleware/validate.js';
+import {
+  getCart,
   addProductToCart,
-  clearProductsFromCart,
+  updateCartItemQuantity,
   deleteProductFromCart,
-} = cartController;
+  clearCart,
+  addToCartSchema,
+  updateQuantitySchema,
+} from '../controllers/cartController.js';
 
-const router = extress.Router();
+const router = express.Router();
 
-router.post('/add', protect, addProductToCart);
-router.get('/get', protect, getProductsFromCart);
-router.delete('/cart', protect, clearProductsFromCart);
-router.delete('/:id', protect, deleteProductFromCart);
+router.use(protect);
+
+router.get('/', getCart);
+router.post('/', validate(addToCartSchema), addProductToCart);
+router.patch('/:id', validate(updateQuantitySchema), updateCartItemQuantity);
+router.delete('/:id', deleteProductFromCart);
+router.delete('/', clearCart);
 
 export default router;

@@ -1,46 +1,45 @@
-import axios from 'axios'
-import { BASE_URL } from './apiPaths.js'
+import axios from 'axios';
+import { BASE_URL } from './apiPaths.js';
+
+export const TOKEN_KEY = 'tvmaxx.token';
 
 const axiosInstance = axios.create({
   baseURL: BASE_URL,
-  timeout: 10000,
-  headers: {
-    'Content-Type': 'application/json',
-    Accept: 'application/json'
-  }
-})
+  timeout: 15000,
+  headers: { 'Content-Type': 'application/json', Accept: 'application/json' }
+});
 
-// Request Interceptor
-axiosInstance.interceptors.request.use(
-  (config) => {
-    const accesToken = localStorage.getItem('token')
-    if (accesToken) {
-      config.headers.Authorization = `Bearer ${accesToken}`
-    }
-    return config
-  },
-  (error) => {
-    return Promise.reject(error)
-  }
-)
+axiosInstance.interceptors.request.use((config) => {
+  const token = localStorage.getItem(TOKEN_KEY);
+  if (token) config.headers.Authorization = `Bearer ${token}`;
+  return config;
+});
 
-// Response Interceptor
+// Sesiunea expirată e semnalată prin eveniment, nu printr-un
+// `window.location.href`: o redirectare brutală arunca utilizatorul din
+// aplicație fără explicații și pierdea ruta pe care se afla.
+export const SESSION_EXPIRED_EVENT = 'tvmaxx:session-expired';
+
 axiosInstance.interceptors.response.use(
-  (response) => {
-    return response
-  },
+  (response) => response,
   (error) => {
-    if (error.response) {
-      if (error.response.status === 401) {
-        window.location.href = '/login'
-      } else if (error.response.status === 500) {
-        console.error('Server error. Please try again leter')
-      }
-    } else if (error.code === 'ECONNABORTED') {
-      console.error('Request timeout. Please try again')
-    }
-    return Promise.reject(error)
-  }
-)
+    const status = error.response?.status;
+    const isAuthCall = error.config?.url?.startsWith('/auth/');
 
-export default axiosInstance
+    if (status === 401 && !isAuthCall && localStorage.getItem(TOKEN_KEY)) {
+      localStorage.removeItem(TOKEN_KEY);
+      window.dispatchEvent(new CustomEvent(SESSION_EXPIRED_EVENT));
+    }
+
+    return Promise.reject(error);
+  }
+);
+
+/** Mesajul de eroare al serverului, cu revenire la unul generic. */
+export function apiErrorMessage(error, fallback) {
+  const data = error?.response?.data;
+  if (data?.details?.length) return data.details[0].message;
+  return data?.message || fallback;
+}
+
+export default axiosInstance;

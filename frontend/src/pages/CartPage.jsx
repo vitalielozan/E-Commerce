@@ -1,97 +1,201 @@
-import React, { useEffect } from 'react';
-import EmptyMasage from '../components/EmptyMasage.jsx';
-import MotionDiv from '../components/MotionDiv.jsx';
-import { Trash2 } from 'lucide-react';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { Trash2, ShoppingBag } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+
+import ProductImage from '../components/ProductImage.jsx';
+import QuantityStepper from '../components/QuantityStepper.jsx';
+import EmptyState from '../components/EmptyState.jsx';
+import { RowSkeleton } from '../components/Skeletons.jsx';
+import { SIZES } from '../services/images.js';
+import { formatPrice } from '../services/format.js';
 import { useCartFav } from '../hooks/useCartFav.js';
 import { useAuthContext } from '../hooks/useAuthContext.js';
-import { useUserAuth } from '../hooks/useUserAuth.js';
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Button,
-  Image
-} from '@heroui/react';
-import { useTranslation } from 'react-i18next';
-function CartPage() {
-  const { t } = useTranslation();
-  useUserAuth();
-  const navigate = useNavigate();
-  const { carts, removeFromCart } = useCartFav();
-  const total = carts.reduce((acc, item) => acc + item.product.price, 0);
-  const { user, isLoading } = useAuthContext();
+import { usePageMeta } from '../hooks/usePageMeta.js';
 
-  useEffect(() => {
-    if (!user && !isLoading) {
-      navigate('/login', { replace: true });
-    }
-  }, [navigate, user, isLoading]);
+const FREE_SHIPPING_THRESHOLD = 500;
+const SHIPPING_COST = 19.99;
+
+function CartPage() {
+  const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
+  const { user, isLoading: authLoading } = useAuthContext();
+  const { cart, isLoading, setQuantity, removeFromCart, clearCart } = useCartFav();
+
+  usePageMeta({ title: t('cart.title') });
+
+  if (authLoading || isLoading) return <RowSkeleton count={3} />;
+
+  if (!user) {
+    return (
+      <EmptyState
+        icon={ShoppingBag}
+        title={t('cart.signInTitle')}
+        description={t('cart.signInHint')}
+        actionLabel={t('nav.signIn')}
+        actionTo="/login"
+      />
+    );
+  }
+
+  if (cart.items.length === 0) {
+    return (
+      <EmptyState
+        icon={ShoppingBag}
+        title={t('cart.empty')}
+        description={t('cart.emptyHint')}
+        actionLabel={t('cart.startShopping')}
+        actionTo="/shop"
+      />
+    );
+  }
+
+  const shipping = cart.subtotal >= FREE_SHIPPING_THRESHOLD ? 0 : SHIPPING_COST;
+  const total = cart.subtotal + shipping;
+  const remainingForFreeShipping = FREE_SHIPPING_THRESHOLD - cart.subtotal;
 
   return (
-    <div className="p-3 text-center">
-      <h1 className="mb-6 text-4xl font-bold">{t('cart.title')}</h1>
-      {carts.length === 0 ? (
-        <EmptyMasage imageSrc="/shopping-bag.png" message={t('cart.empty')} />
-      ) : (
-        <MotionDiv>
-          <div className="grid grid-cols-1 items-stretch gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            {carts.map((item, index) => {
-              return (
-                <Card
-                  key={index}
-                  className="w-full bg-white/80 shadow-xl transition-shadow duration-200 hover:shadow-2xl dark:bg-gray-900/80"
-                >
-                  <Link to={`/products/${item.product._id}`}>
-                    <CardHeader className="cursor-pointer p-0">
-                      <Image
-                        isZoomed
-                        src={item.product.image}
-                        alt={item.product.title}
-                        className="mx-auto h-48 w-full rounded-t object-cover px-10"
-                      />
-                    </CardHeader>
-                  </Link>
-                  <CardBody className="space-y-2 p-4">
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                      {item.product.title}
-                    </h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">
-                      {item.product.shortDesc}
-                    </p>
-                    <p className="text-md font-bold text-indigo-600">
-                      ${item.product.price}
-                    </p>
-                  </CardBody>
-                  <CardFooter className="p-4 pt-0">
-                    <Button
-                      className="rounded-full bg-red-600 px-4 py-2 text-white shadow hover:scale-105"
-                      onPress={() => removeFromCart(item._id)}
-                      fullWidth
-                    >
-                      <Trash2 className="h-5 w-5" />
-                    </Button>
-                  </CardFooter>
-                </Card>
-              );
-            })}
-          </div>
+    <div className="space-y-6">
+      <div className="flex items-center justify-between">
+        <h1 className="font-display text-2xl font-bold md:text-3xl">
+          {t('cart.title')}
+        </h1>
+        <button
+          type="button"
+          onClick={clearCart}
+          className="text-muted text-sm font-medium hover:text-[var(--color-signal-alert)]"
+        >
+          {t('cart.clear')}
+        </button>
+      </div>
 
-          <div className="mt-8 space-y-4 text-center">
-            <p className="text-xl font-semibold text-gray-700 dark:text-gray-500">
-              {t('cart.total')}{' '}
-              <span className="text-indigo-600">${total.toFixed(2)}</span>
-            </p>
-            <Button
-              className="rounded bg-green-600 px-6 py-2 text-lg font-medium text-white shadow hover:scale-105"
-              onPress={() => navigate('/checkout')}
+      <div className="grid gap-8 lg:grid-cols-[1fr_320px]">
+        <ul className="space-y-3" role="list">
+          {cart.items.map((item) => (
+            <li key={item._id} className="surface-panel flex gap-4 p-4">
+              <Link
+                to={`/products/${item.product.slug || item.product._id}`}
+                className="w-28 shrink-0 sm:w-36"
+              >
+                <ProductImage
+                  src={item.product.image}
+                  alt={item.product.title}
+                  sizes={SIZES.row}
+                  className="rounded-lg"
+                />
+              </Link>
+
+              <div className="flex min-w-0 flex-1 flex-col gap-2">
+                <div className="flex items-start justify-between gap-3">
+                  <div className="min-w-0">
+                    <p className="text-muted text-xs">{item.product.brand}</p>
+                    <h2 className="font-display truncate text-sm font-semibold sm:text-base">
+                      <Link to={`/products/${item.product.slug || item.product._id}`}>
+                        {item.product.title}
+                      </Link>
+                    </h2>
+                  </div>
+
+                  <button
+                    type="button"
+                    onClick={() => removeFromCart(item._id)}
+                    className="text-muted shrink-0 rounded-md p-1.5 hover:text-[var(--color-signal-alert)]"
+                    aria-label={t('cart.removeItem', { title: item.product.title })}
+                  >
+                    <Trash2 className="h-4 w-4" />
+                  </button>
+                </div>
+
+                <div className="mt-auto flex flex-wrap items-center justify-between gap-3">
+                  <QuantityStepper
+                    value={item.quantity}
+                    onChange={(quantity) => setQuantity(item._id, quantity)}
+                    max={Math.min(99, item.product.stock || 99)}
+                    label={t('cart.quantityFor', { title: item.product.title })}
+                  />
+
+                  <div className="text-right">
+                    <p className="tabular font-display font-semibold">
+                      {formatPrice(item.lineTotal, i18n.language)}
+                    </p>
+                    {item.quantity > 1 && (
+                      <p className="text-muted tabular text-xs">
+                        {t('cart.eachPrice', {
+                          price: formatPrice(item.product.price, i18n.language),
+                        })}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+
+        <aside className="lg:sticky lg:top-24 lg:h-fit">
+          <div className="surface-panel space-y-4 p-5">
+            <h2 className="font-display text-base font-semibold">
+              {t('cart.summary')}
+            </h2>
+
+            <dl className="space-y-2.5 text-sm">
+              <div className="flex justify-between">
+                <dt className="text-secondary">
+                  {t('cart.subtotalFor', { count: cart.itemCount })}
+                </dt>
+                <dd className="tabular font-medium">
+                  {formatPrice(cart.subtotal, i18n.language)}
+                </dd>
+              </div>
+
+              <div className="flex justify-between">
+                <dt className="text-secondary">{t('cart.shipping')}</dt>
+                <dd className="tabular font-medium">
+                  {shipping === 0
+                    ? t('cart.freeShipping')
+                    : formatPrice(shipping, i18n.language)}
+                </dd>
+              </div>
+
+              <div
+                className="flex justify-between border-t pt-3 text-base"
+                style={{ borderColor: 'var(--border-hairline)' }}
+              >
+                <dt className="font-semibold">{t('cart.total')}</dt>
+                <dd className="tabular font-display font-bold">
+                  {formatPrice(total, i18n.language)}
+                </dd>
+              </div>
+            </dl>
+
+            {shipping > 0 && (
+              <p className="text-secondary text-xs leading-relaxed">
+                {t('cart.freeShippingHint', {
+                  amount: formatPrice(remainingForFreeShipping, i18n.language),
+                })}
+              </p>
+            )}
+
+            <button
+              type="button"
+              onClick={() => navigate('/checkout')}
+              className="w-full rounded-lg px-5 py-3 text-sm font-semibold"
+              style={{
+                backgroundColor: 'var(--color-ember-400)',
+                color: 'var(--color-ink-950)',
+              }}
             >
               {t('cart.checkout')}
-            </Button>
+            </button>
+
+            <Link
+              to="/shop"
+              className="text-secondary block text-center text-sm hover:text-[var(--text-primary)]"
+            >
+              {t('cart.continueShopping')}
+            </Link>
           </div>
-        </MotionDiv>
-      )}
+        </aside>
+      </div>
     </div>
   );
 }

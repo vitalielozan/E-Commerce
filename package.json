@@ -1,14 +1,19 @@
 {
-  "name": "e-shop-mern-app",
+  "name": "tv-maxx",
   "version": "1.0.0",
-  "description": "- 👋 Hi, I’m @vitalielozan - 👀 I’m interested in FullStack Developer - 🌱 I’m currently learning Frontend Developer (HTML&CSS, Javascript, React)",
-  "main": "index.js",
+  "description": "Full-stack MERN storefront for televisions.",
   "scripts": {
     "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
-    "start": "npm run start --prefix backend"
+    "start": "npm run start --prefix backend",
+    "dev": "npm run dev --prefix backend & npm run dev --prefix frontend",
+    "lint": "npm run lint --prefix frontend",
+    "test": "npm test --prefix backend"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {},
+  "engines": {
+    "node": ">=20"
+  }
 }

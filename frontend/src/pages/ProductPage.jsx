@@ -1,142 +1,241 @@
-import React from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
-import { useFetchProducts } from '../hooks/useFetchProducts.js';
-import { ArrowLeft, Heart, ShoppingCart, Trash2 } from 'lucide-react';
-import { useCartFav } from '../hooks/useCartFav.js';
-import ImageCarousel from '../components/ImageCarousel.jsx';
-import ReviewProduct from '../components/ReviewProduct.jsx';
-import {
-  Spinner,
-  Button,
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter
-} from '@heroui/react';
+import { useCallback, useEffect, useState } from 'react';
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import { ArrowLeft, Heart, ShoppingCart, Check, Loader2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+
+import ImageCarousel from '../components/ImageCarousel.jsx';
+import ProductCard from '../components/ProductCard.jsx';
+import ReviewProduct from '../components/ReviewProduct.jsx';
+import Price from '../components/Price.jsx';
+import Rating from '../components/Rating.jsx';
+import QuantityStepper from '../components/QuantityStepper.jsx';
+import { ProductDetailSkeleton } from '../components/Skeletons.jsx';
+import ErrorState from '../components/ErrorState.jsx';
+import { productsApi } from '../services/api.js';
+import { useCartFav } from '../hooks/useCartFav.js';
+import { usePageMeta } from '../hooks/usePageMeta.js';
 
 function ProductPage() {
   const { t } = useTranslation();
-  const navigate = useNavigate();
   const { id } = useParams();
+  const navigate = useNavigate();
+
+  const [product, setProduct] = useState(null);
+  const [related, setRelated] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [quantity, setQuantity] = useState(1);
+
   const {
-    carts,
-    favorites,
     addToCart,
-    removeFromCartByProductId,
-    removeFromFavoritesByProductId,
-    addToFavorites
+    toggleFavorite,
+    removeProductFromCart,
+    cartProductIds,
+    favoriteProductIds,
+    isPending,
   } = useCartFav();
-  const { data: product, loading, error } = useFetchProducts('id', id);
 
-  if (loading)
-    return (
-      <div className="flex items-center justify-center py-20">
-        <Spinner
-          size="lg"
-          color="primary"
-          label={t('common.loading')}
-          labelColor="primary"
-        />
-      </div>
-    );
+  const load = useCallback(() => {
+    let active = true;
+    setLoading(true);
+    setError(null);
+    setQuantity(1);
 
-  if (error)
-    return (
-      <div className="py-10 text-center text-red-500">
-        {t('common.errorLoadingProduct')}
-      </div>
-    );
+    productsApi
+      .detail(id)
+      .then((data) => {
+        if (!active) return;
+        setProduct(data);
+        return productsApi.related(data._id);
+      })
+      .then((rel) => active && rel && setRelated(rel))
+      .catch((err) => active && setError(err))
+      .finally(() => active && setLoading(false));
 
-  if (!product || Array.isArray(product))
-    return (
-      <p className="py-10 text-center text-red-500">{t('product.notFound')}</p>
-    );
+    return () => {
+      active = false;
+    };
+  }, [id]);
 
-  const { title, description, price, images } = product;
-  const imagesArr = Array.isArray(images) ? images : [images];
-  const isInCart = carts.some((item) => item.product._id === id);
-  const isInFavorites = favorites.some((item) => item.product._id === id);
+  useEffect(load, [load]);
 
-  const handleGoBack = () => {
-    navigate(-1);
-  };
+  usePageMeta({
+    title: product?.title,
+    description: product?.shortDesc,
+  });
+
+  if (loading) return <ProductDetailSkeleton />;
+  if (error || !product) return <ErrorState onRetry={load} />;
+
+  const inCart = cartProductIds.has(product._id);
+  const isFavorite = favoriteProductIds.has(product._id);
+  const busy = isPending(product._id);
+  const outOfStock = product.stock === 0;
+  const lowStock = product.stock > 0 && product.stock <= 5;
+
+  const images = [product.image, ...(product.images ?? [])].filter(
+    (src, index, arr) => src && arr.indexOf(src) === index
+  );
 
   return (
-    <div className="mx-auto flex w-full max-w-5xl flex-col gap-4">
-      <Button
-        onPress={handleGoBack}
-        variant="light"
-        className="w-fit rounded-full border border-slate-200 bg-white/80 px-4 py-2 text-sm font-semibold text-slate-700 shadow-sm transition-colors hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-900/80 dark:text-slate-200 dark:hover:bg-slate-800"
-        startContent={<ArrowLeft className="h-4 w-4" />}
+    <div className="space-y-14">
+      <button
+        type="button"
+        onClick={() => navigate(-1)}
+        className="text-secondary flex items-center gap-1.5 text-sm font-medium hover:text-[var(--text-primary)]"
       >
+        <ArrowLeft className="h-4 w-4" aria-hidden="true" />
         {t('common.goBack')}
-      </Button>
+      </button>
 
-      <Card className="w-full rounded-3xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6 dark:border-slate-800 dark:bg-slate-900">
-        <CardHeader className="grid w-full grid-cols-1 items-start gap-6 p-0 lg:grid-cols-2">
-          <div className="rounded-2xl border border-slate-200 bg-slate-50 p-3 dark:border-slate-700 dark:bg-slate-950/60">
-            <ImageCarousel srcArray={imagesArr} />
+      <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
+        <ImageCarousel images={images} alt={product.title} />
+
+        <div className="space-y-5">
+          <div>
+            <Link
+              to={`/shop?brand=${encodeURIComponent(product.brand)}`}
+              className="text-sm font-medium"
+              style={{ color: 'var(--color-ember-500)' }}
+            >
+              {product.brand}
+            </Link>
+            <h1 className="font-display mt-1.5 text-3xl leading-tight font-bold md:text-4xl">
+              {product.title}
+            </h1>
           </div>
 
-          <div className="space-y-4 pt-1">
-            <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 md:text-4xl dark:text-white">
-              {title}
-            </h1>
+          <Rating value={product.ratingAverage} count={product.ratingCount} size="md" />
 
-            <span className="inline-flex rounded-full bg-sky-100 px-4 py-1.5 text-xl font-bold text-sky-700 dark:bg-sky-900/40 dark:text-sky-300">
-              ${price}
+          <Price
+            value={product.price}
+            compareAt={product.compareAtPrice}
+            size="lg"
+          />
+
+          <p className="text-secondary max-w-prose leading-relaxed">
+            {product.description}
+          </p>
+
+          <div className="flex items-center gap-2 text-sm">
+            <span
+              className="inline-block h-2 w-2 rounded-full"
+              style={{
+                backgroundColor: outOfStock
+                  ? 'var(--color-signal-alert)'
+                  : 'var(--color-signal-stock)',
+              }}
+              aria-hidden="true"
+            />
+            <span className={outOfStock ? '' : 'text-secondary'}>
+              {outOfStock
+                ? t('product.outOfStock')
+                : lowStock
+                  ? t('product.lowStock', { count: product.stock })
+                  : t('product.inStock')}
             </span>
+          </div>
 
-            <p className="text-base leading-relaxed text-slate-600 dark:text-slate-300">
-              {description}
-            </p>
+          {!outOfStock && (
+            <div className="flex flex-wrap items-center gap-3 pt-1">
+              <QuantityStepper
+                value={quantity}
+                onChange={setQuantity}
+                max={Math.min(99, product.stock || 99)}
+                disabled={inCart}
+              />
 
-            <div className="flex items-center gap-3 pt-2">
-              {isInCart ? (
-                <Button
-                  onPress={() => removeFromCartByProductId(product._id)}
-                  className="rounded-xl bg-red-600 px-4 py-2 text-white shadow-sm transition-colors hover:bg-red-700"
+              {inCart ? (
+                <button
+                  type="button"
+                  onClick={() => removeProductFromCart(product._id)}
+                  className="surface-panel flex flex-1 items-center justify-center gap-2 px-6 py-3 text-sm font-semibold"
                 >
-                  <Trash2 className="h-5 w-5" />
-                </Button>
+                  <Check className="h-4 w-4" aria-hidden="true" />
+                  {t('product.inCartRemove')}
+                </button>
               ) : (
-                <Button
-                  title={t('product.addToCart')}
-                  onPress={() => addToCart(product)}
-                  className="rounded-xl bg-slate-900 px-4 py-2 text-white shadow-sm transition-colors hover:bg-sky-700 dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-sky-300"
+                <button
+                  type="button"
+                  onClick={() => addToCart(product, quantity)}
+                  disabled={busy}
+                  className="flex flex-1 items-center justify-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold disabled:opacity-60"
+                  style={{
+                    backgroundColor: 'var(--color-ember-400)',
+                    color: 'var(--color-ink-950)',
+                  }}
                 >
-                  <ShoppingCart className="h-5 w-5" />
-                </Button>
+                  {busy ? (
+                    <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
+                  ) : (
+                    <ShoppingCart className="h-4 w-4" aria-hidden="true" />
+                  )}
+                  {t('product.addToCartAction')}
+                </button>
               )}
 
-              <Button
-                title={t('product.addToFavorites')}
-                onPress={
-                  isInFavorites
-                    ? () => removeFromFavoritesByProductId(product._id)
-                    : () => addToFavorites(product)
+              <button
+                type="button"
+                onClick={() => toggleFavorite(product)}
+                disabled={busy}
+                aria-pressed={isFavorite}
+                aria-label={
+                  isFavorite
+                    ? t('product.removeFromFavorites', { title: product.title })
+                    : t('product.addToFavorites', { title: product.title })
                 }
-                className={`rounded-xl px-4 py-2 text-white shadow-sm transition-colors ${
-                  isInFavorites
-                    ? 'bg-pink-600 hover:bg-pink-700'
-                    : 'bg-slate-900 hover:bg-sky-700 dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-sky-300'
-                }`}
+                className="surface-panel grid h-12 w-12 place-items-center"
+                style={{
+                  color: isFavorite
+                    ? 'var(--color-signal-alert)'
+                    : 'var(--text-secondary)',
+                }}
               >
                 <Heart
                   className="h-5 w-5"
-                  fill={isInFavorites ? 'currentColor' : 'none'}
+                  fill={isFavorite ? 'currentColor' : 'none'}
                 />
-              </Button>
+              </button>
             </div>
-          </div>
-        </CardHeader>
+          )}
 
-        <CardBody className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-950/50">
-          <ReviewProduct productId={id} />
-        </CardBody>
-        <CardFooter className="p-0" />
-      </Card>
+          {product.specs && Object.keys(product.specs).length > 0 && (
+            <div className="pt-3">
+              <h2 className="font-display mb-3 text-sm font-semibold">
+                {t('product.specifications')}
+              </h2>
+              <dl className="surface-panel divide-y overflow-hidden text-sm"
+                  style={{ borderColor: 'var(--border-hairline)' }}>
+                {Object.entries(product.specs).map(([label, value]) => (
+                  <div
+                    key={label}
+                    className="flex justify-between gap-4 px-4 py-2.5"
+                    style={{ borderColor: 'var(--border-hairline)' }}
+                  >
+                    <dt className="text-secondary">{label}</dt>
+                    <dd className="tabular text-right font-medium">{value}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          )}
+        </div>
+      </div>
+
+      <ReviewProduct productId={product._id} onRatingChange={load} />
+
+      {related.length > 0 && (
+        <section className="space-y-5">
+          <h2 className="font-display text-xl font-bold">
+            {t('product.related')}
+          </h2>
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {related.map((item) => (
+              <ProductCard key={item._id} product={item} />
+            ))}
+          </div>
+        </section>
+      )}
     </div>
   );
 }

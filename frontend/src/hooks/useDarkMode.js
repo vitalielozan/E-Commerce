@@ -1,8 +1,10 @@
-import { useContext } from "react";
-import { ThemeContext } from "../context/context.js";
+import { useContext } from 'react';
+import { ThemeContext } from '../context/context.js';
 
 export function useDarkMode() {
-  const { darkMode, setDarkMode } = useContext(ThemeContext);
-
-  return [darkMode, setDarkMode];
+  const context = useContext(ThemeContext);
+  if (!context) {
+    throw new Error('useDarkMode must be used within a ThemeProvider');
+  }
+  return context;
 }

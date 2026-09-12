@@ -1,154 +1,248 @@
 {
+  "meta": {
+    "defaultTitle": "TV-Maxx — Televisions worth watching",
+    "defaultDescription": "Browse OLED, MiniLED and QLED televisions from seven brands, with specifications, reviews and next-day delivery."
+  },
   "common": {
-    "loading": "Loading...",
-    "errorLoadingProduct": "Error loading product.",
-    "goBack": "Go Back",
-    "continueShopping": "Continue Shopping",
+    "loading": "Loading",
+    "goBack": "Back",
     "anonymous": "Anonymous",
-    "currency": "$",
-    "theme": {
-      "light": "Light",
-      "dark": "Dark"
-    }
+    "retry": "Try again",
+    "loadError": "We couldn't load this",
+    "loadErrorHint": "Check your connection and try again."
   },
   "nav": {
-    "home": "Home",
-    "favorites": "Favorites",
+    "primary": "Main",
+    "shop": "Shop",
+    "brands": "Brands",
     "cart": "Cart",
-    "login": "LogIn",
-    "logout": "LogOut",
-    "searchPlaceholder": "Search...",
-    "searchGo": "Go",
-    "language": "Language"
+    "favorites": "Favourites",
+    "orders": "Orders",
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "language": "Language",
+    "searchLabel": "Search products",
+    "searchPlaceholder": "Search televisions",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "skipToContent": "Skip to content"
   },
-  "hero": {
-    "title": "Discover Top Brands & Exclusive Deals",
-    "subtitle": "Shop smarter with curated collections from premium brands all in one place."
+  "theme": {
+    "switchToDark": "Switch to dark theme",
+    "switchToLight": "Switch to light theme"
   },
   "home": {
-    "featuredBrands": "Featured Brands",
-    "viewAllBrands": "View all Brands",
-    "productsLoading": "Products loading..."
+    "viewProduct": "View this model",
+    "viewAll": "See all",
+    "topRated": "Best reviewed",
+    "topRatedHint": "The models our customers rate highest.",
+    "newArrivals": "Latest additions",
+    "newArrivalsHint": "Recently added to the catalogue."
+  },
+  "shop": {
+    "title": "All televisions",
+    "subtitle": "Filter by brand, screen size and price.",
+    "resultsFor": "Results for \"{{query}}\"",
+    "filters": "Filters",
+    "clearAll": "Clear filters",
+    "brand": "Brand",
+    "screenSize": "Screen size",
+    "maxPrice": "Maximum price",
+    "sortBy": "Sort",
+    "sort": {
+      "newest": "Newest",
+      "priceAsc": "Price: low to high",
+      "priceDesc": "Price: high to low",
+      "rating": "Best rated"
+    },
+    "resultCount_one": "{{count}} television",
+    "resultCount_other": "{{count}} televisions",
+    "noResults": "Nothing matches those filters",
+    "noResultsHint": "Try widening the price range or removing a brand.",
+    "pagination": "Pages",
+    "previous": "Previous",
+    "next": "Next",
+    "pageOf": "Page {{page}} of {{total}}"
   },
   "brands": {
-    "allBrands": "All Brands",
-    "viewAll": "View All",
-    "prev": "Prev",
-    "next": "Next",
-    "noProductsForBrand": "No products found for {{brandName}}.",
-    "descriptions": {
-      "SAMSUNG": "Samsung, modern innovative electronics for smart living",
-      "JVC": "Reliable sound and video solutions with JVC",
-      "PANASONIC": "Panasonic brings advanced tech for everyday use",
-      "LG": "Smart appliances for modern homes with LG",
-      "SHARP": "High-performance screens and electronics with Sharp",
-      "HISENSE": "Affordable quality with modern features",
-      "default": "{{brandName}} brand products"
-    }
+    "title": "Brands we carry",
+    "subtitle": "Seven manufacturers, from budget panels to reference OLED.",
+    "modelCount_one": "{{count}} model",
+    "modelCount_other": "{{count}} models",
+    "from": "from {{price}}"
   },
   "product": {
-    "viewDetails": "View Details",
-    "notFound": "Product not found.",
     "addToCart": "Add to cart",
-    "addToFavorites": "Add to favorites"
-  },
-  "reviews": {
-    "title": "Reviews",
-    "writeComment": "Write a comment...",
-    "stars": "{{count}} stars",
-    "send": "Send Review",
-    "mustLogin": "You must be logged in to write a review.",
-    "loading": "Loading reviews...",
-    "empty": "There are no reviews for this product."
-  },
-  "auth": {
-    "welcomeBack": "Welcome Back",
-    "loginSubtitle": "Please enter your details to log in.",
-    "emailAddress": "Email Address",
-    "password": "Password",
-    "minChars": "Min 8 Characters",
-    "login": "LOGIN",
-    "noAccount": "Don't have an account?",
-    "signUp": "Sign Up",
-    "createAccount": "Create an Account",
-    "signupSubtitle": "Join us today by entering your details below",
-    "fullName": "Full Name",
-    "yourName": "Your Name",
-    "confirmPassword": "Confirm your password",
-    "signUpButton": "SIGN UP",
-    "alreadyHaveAccount": "Already have an account?",
-    "loginLink": "Login",
-    "errors": {
-      "invalidEmail": "Please enter a valid email address.",
-      "enterPassword": "Please enter the password.",
-      "enterName": "Please enter your name.",
-      "invalidPassword": "Password must be at least 8 characters, include uppercase, number, and special character.",
-      "passwordMismatch": "Passwords do not match.",
-      "generic": "Something went wrong. Please try again"
-    },
-    "sideTitle": "Shop TV Online Store! Buying a new TV can be an easy experience with us."
+    "addToCartAction": "Add to cart",
+    "inCart": "In cart",
+    "inCartRemove": "In cart — remove",
+    "outOfStock": "Out of stock",
+    "inStock": "In stock",
+    "lowStock": "Only {{count}} left",
+    "addToFavorites": "Add {{title}} to favourites",
+    "removeFromFavorites": "Remove {{title}} from favourites",
+    "specifications": "Specifications",
+    "related": "You might also like",
+    "savePercent": "Save {{percent}}%",
+    "imageAlt": "{{title}}, image {{index}}",
+    "previousImage": "Previous image",
+    "nextImage": "Next image",
+    "goToImage": "Go to image {{index}}"
   },
   "cart": {
-    "title": "Shopping cart",
-    "total": "Total:",
-    "checkout": "Proceed to checkout",
-    "empty": "There are no products in your shopping cart. Fill your shopping cart with one of our offers."
+    "title": "Your cart",
+    "empty": "Your cart is empty",
+    "emptyHint": "Once you add a television, it will show up here.",
+    "emptyAction": "Browse televisions",
+    "startShopping": "Browse televisions",
+    "signInTitle": "Sign in to see your cart",
+    "signInHint": "Your cart is saved to your account, so it follows you between devices.",
+    "summary": "Summary",
+    "subtotal": "Subtotal",
+    "subtotalFor_one": "Subtotal ({{count}} item)",
+    "subtotalFor_other": "Subtotal ({{count}} items)",
+    "shipping": "Delivery",
+    "freeShipping": "Free",
+    "freeShippingHint": "Add {{amount}} more for free delivery.",
+    "total": "Total",
+    "checkout": "Checkout",
+    "continueShopping": "Continue shopping",
+    "clear": "Empty cart",
+    "quantity": "Quantity",
+    "quantityFor": "Quantity for {{title}}",
+    "increaseQuantity": "Increase quantity",
+    "decreaseQuantity": "Decrease quantity",
+    "removeItem": "Remove {{title}}",
+    "eachPrice": "{{price}} each"
   },
   "favorites": {
-    "title": "Your favorite products",
-    "empty": "There are no favorite products. Choose your favorites from our offers.",
-    "alreadyInCart": "Product already in cart!"
-  },
-  "notifications": {
-    "loginForCart": "Log in to add this item to your cart.",
-    "invalidProduct": "Invalid product.",
-    "productInCart": "Product already in cart!",
-    "addedToCart": "Added to cart!",
-    "failedAddToCart": "Failed to add to cart.",
-    "removedFromCart": "Removed from cart!",
-    "failedRemoveFromCart": "Failed to remove from cart.",
-    "productInFavorites": "Product already in favorites!",
-    "addedToFavorites": "Added to favorites!",
-    "failedAddToFavorite": "Failed to add to favorite.",
-    "addedToCartFromFavorite": "Added to cart from favorite!",
-    "failedAddFromFavorite": "Failed to add from favorite.",
-    "removedFromFavorite": "Removed from favorite!",
-    "failedRemoveFromFavorite": "Failed to remove from favorite.",
-    "cartCleared": "Cart cleared.",
-    "failedClearCart": "Failed to clear cart."
+    "title": "Favourites",
+    "empty": "No favourites yet",
+    "emptyHint": "Tap the heart on any television to save it for later.",
+    "signInTitle": "Sign in to see your favourites",
+    "signInHint": "Saved televisions stay with your account."
   },
   "checkout": {
     "title": "Checkout",
-    "success": "Payment successful! Redirecting to homepage...",
-    "orderSummary": "Order Summary",
-    "billingAddress": "Billing Address",
-    "shippingAddress": "Shipping Address",
-    "cardNumber": "Card Number",
-    "payNow": "Pay Now",
-    "processing": "Processing...",
+    "deliveryDetails": "Delivery",
+    "payment": "Payment",
+    "shippingAddress": "Shipping address",
+    "billingAddress": "Billing address",
+    "cardNumber": "Card number",
+    "demoCardHint": "This is a demo shop — use 4242 4242 4242 4242.",
+    "privacyNote": "Your card number stays in this browser. Only the last four digits are sent to us.",
+    "orderSummary": "Order summary",
+    "placeOrder": "Pay {{amount}}",
+    "processing": "Processing",
+    "failed": "We couldn't place your order",
+    "successTitle": "Order confirmed",
+    "successBody": "We've saved your order as {{reference}}. A confirmation would normally arrive by email.",
     "validation": {
-      "billingRequired": "Billing address is required",
-      "shippingRequired": "Shipping address is required",
-      "invalidCard": "Invalid card number",
-      "cardRequired": "Card number is required"
+      "billingRequired": "Enter a billing address",
+      "shippingRequired": "Enter a shipping address",
+      "addressTooShort": "That address looks too short",
+      "cardRequired": "Enter a card number",
+      "invalidCard": "That card number isn't valid"
     }
   },
-  "search": {
-    "resultFor": "Result for:",
-    "sortByPrice": "Sort by price:",
-    "default": "Default",
-    "asc": "Ascending price",
-    "desc": "Descending price",
-    "noResults": "No products found."
+  "orders": {
+    "title": "Your orders",
+    "empty": "No orders yet",
+    "emptyHint": "Orders you place will be listed here.",
+    "signInTitle": "Sign in to see your orders",
+    "signInHint": "Your order history is tied to your account.",
+    "notFound": "We couldn't find that order",
+    "backToOrders": "All orders",
+    "itemCount_one": "{{count}} item",
+    "itemCount_other": "{{count}} items",
+    "quantityAt": "{{quantity}} × {{price}}",
+    "delivery": "Delivery",
+    "cardEnding": "Card ending {{last4}}",
+    "status": {
+      "pending": "Pending",
+      "paid": "Paid",
+      "shipped": "Shipped",
+      "delivered": "Delivered",
+      "cancelled": "Cancelled"
+    }
+  },
+  "reviews": {
+    "title": "Reviews",
+    "empty": "No reviews yet. Be the first.",
+    "noRatingYet": "No reviews",
+    "ratingLabel": "Rated {{value}} out of 5, {{count}} reviews",
+    "yourRating": "Your rating",
+    "yourReview": "Your review",
+    "placeholder": "How is the picture? The sound? Would you buy it again?",
+    "publish": "Post review",
+    "published": "Thanks — your review is live",
+    "deleted": "Review deleted",
+    "delete": "Delete my review",
+    "failed": "We couldn't save your review",
+    "alreadyReviewed": "You've already reviewed this television.",
+    "signInToReview": "Sign in to leave a review.",
+    "starLabel_one": "{{count}} star",
+    "starLabel_other": "{{count}} stars"
+  },
+  "auth": {
+    "signInTitle": "Sign in",
+    "welcomeBack": "Welcome back",
+    "loginSubtitle": "Sign in to reach your cart, favourites and orders.",
+    "createAccount": "Create an account",
+    "signupSubtitle": "It takes a minute and keeps your cart across devices.",
+    "fullName": "Full name",
+    "emailAddress": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "signInAction": "Sign in",
+    "signUpAction": "Create account",
+    "noAccount": "No account yet?",
+    "signUpLink": "Create one",
+    "alreadyHaveAccount": "Already have an account?",
+    "loginLink": "Sign in",
+    "sessionExpired": "Your session expired — please sign in again.",
+    "rules": {
+      "length": "At least 8 characters",
+      "uppercase": "One uppercase letter",
+      "lowercase": "One lowercase letter",
+      "digit": "One number",
+      "special": "One special character"
+    },
+    "errors": {
+      "invalidEmail": "Enter a valid email address",
+      "enterPassword": "Enter your password",
+      "enterName": "Enter your name",
+      "weakPassword": "Your password doesn't meet all the requirements",
+      "passwordMismatch": "The passwords don't match",
+      "generic": "Something went wrong. Please try again."
+    }
+  },
+  "notifications": {
+    "loginRequired": "Sign in first to do that",
+    "addedToCart": "{{title}} added to cart",
+    "removedFromCart": "Removed from cart",
+    "failedAddToCart": "We couldn't add that to your cart",
+    "failedRemoveFromCart": "We couldn't remove that item",
+    "failedUpdateCart": "We couldn't update the quantity",
+    "failedClearCart": "We couldn't empty your cart",
+    "addedToFavorites": "Saved to favourites",
+    "removedFromFavorites": "Removed from favourites",
+    "favoriteFailed": "We couldn't update your favourites",
+    "loadFailed": "We couldn't load your cart and favourites"
   },
   "notFound": {
-    "oops": "Oops!",
-    "message": "The page you're looking for doesn't exist...",
-    "goBack": "Go Back"
+    "title": "Page not found",
+    "description": "The page you're after doesn't exist, or it has moved.",
+    "action": "Browse televisions"
   },
   "footer": {
-    "tagline": "Your source for premium TVs.",
-    "followUs": "Follow Us",
-    "rights": "All rights reserved by Vitalie Lozan."
+    "description": "A demo storefront built with the MERN stack. Product names and brands are fictional.",
+    "shop": "Shop",
+    "account": "Account",
+    "topRated": "Best reviewed",
+    "demoNotice": "A portfolio project — no real orders are processed.",
+    "photoCredit": "Photography from Pexels"
   }
 }

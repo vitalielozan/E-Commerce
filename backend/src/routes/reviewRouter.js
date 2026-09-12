@@ -1,12 +1,17 @@
 import express from 'express';
-import * as reviewControler from '../controllers/reviewController.js';
 import { protect } from '../middleware/authMiddleware.js';
-const { addReview, getReviewsForProduct, deleteReview } = reviewControler;
+import { validate } from '../middleware/validate.js';
+import {
+  addReview,
+  getReviewsForProduct,
+  deleteReview,
+  reviewSchema,
+} from '../controllers/reviewController.js';
 
 const router = express.Router();
 
-router.post('/add', protect, addReview);
 router.get('/:productId', getReviewsForProduct);
+router.post('/', protect, validate(reviewSchema), addReview);
 router.delete('/:reviewId', protect, deleteReview);
 
 export default router;

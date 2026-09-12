@@ -1,16 +1,20 @@
 import express from 'express';
+import { validate } from '../middleware/validate.js';
 import {
-  getAllProducts,
-  getProductByBrand,
+  getProducts,
+  getFacets,
+  getProductsByBrand,
   getProductById,
-  getRawProducts,
-} from '../controllers/productContruller.js';
+  getRelatedProducts,
+  listQuerySchema,
+} from '../controllers/productController.js';
 
 const router = express.Router();
 
-router.get('/get', getAllProducts);
-router.get('/brand/:brand', getProductByBrand);
-router.get('/raw', getRawProducts);
+router.get('/', validate(listQuerySchema, 'query'), getProducts);
+router.get('/facets', getFacets);
+router.get('/brand/:brand', getProductsByBrand);
+router.get('/:id/related', getRelatedProducts);
 router.get('/:id', getProductById);
 
 export default router;

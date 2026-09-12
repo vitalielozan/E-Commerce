@@ -1,0 +1,750 @@
+[
+  {
+    "_id": "6990d85b63b2d9136e810a4a",
+    "brand": "LG",
+    "title": "LG NanoCell 50\" 4K Smart TV",
+    "price": 499.99,
+    "image": "https://images.pexels.com/photos/3046581/pexels-photo-3046581.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg",
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg"
+    ],
+    "shortDesc": "50\" LG NanoCell with pure colors and 4K",
+    "description": "The LG NanoCell 50\" TV offers accurate colors, 4K resolution, HDR support, and webOS for smooth streaming and app access.",
+    "category": "tv",
+    "typ": "50\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a51",
+    "brand": "SONY",
+    "title": "Sony OLED A80J 65\"",
+    "price": 1599.99,
+    "image": "https://images.pexels.com/photos/5721906/pexels-photo-5721906.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg",
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg",
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg"
+    ],
+    "shortDesc": "65\" Sony A80J OLED with XR processing",
+    "description": "Sony A80J 65\" combines OLED contrast with XR processing and Acoustic Surface Audio for immersive sound.",
+    "category": "tv",
+    "typ": "65\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a54",
+    "brand": "SAMSUNG",
+    "title": "Samsung The Frame 55\"",
+    "price": 1299.99,
+    "image": "https://images.pexels.com/photos/5721908/pexels-photo-5721908.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg",
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg",
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg"
+    ],
+    "shortDesc": "55\" Samsung The Frame Art TV",
+    "description": "Samsung The Frame 55\" doubles as a TV and digital art frame, with QLED picture quality and customizable bezels.",
+    "category": "tv",
+    "typ": "55\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a6d",
+    "brand": "SONY",
+    "title": "Sony 50\" 4K HDR Smart TV",
+    "price": 599.99,
+    "image": "https://images.pexels.com/photos/5721900/pexels-photo-5721900.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg",
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg",
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg"
+    ],
+    "shortDesc": "50\" Sony 4K HDR Smart TV",
+    "description": "Sony 50\" 4K HDR Smart TV offers sharp images, good motion handling, and built-in streaming apps.",
+    "category": "tv",
+    "typ": "50\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a4e",
+    "brand": "PHILIPS",
+    "title": "Philips Ambilight 55\" 4K TV",
+    "price": 729.99,
+    "image": "https://images.pexels.com/photos/5721903/pexels-photo-5721903.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg",
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg"
+    ],
+    "shortDesc": "55\" Philips Ambilight with immersive backlighting",
+    "description": "The Philips Ambilight 55\" enhances immersion with ambient lighting that matches on-screen content, plus 4K HDR visuals.",
+    "category": "tv",
+    "typ": "55\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a63",
+    "brand": "TCL",
+    "title": "TCL 5-Series 50\" QLED",
+    "price": 449.99,
+    "image": "https://images.pexels.com/photos/5721926/pexels-photo-5721926.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg",
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg"
+    ],
+    "shortDesc": "50\" TCL 5-Series QLED with Dolby Vision",
+    "description": "TCL 5-Series 50\" delivers QLED clarity, Dolby Vision HDR, and a smooth smart TV interface.",
+    "category": "tv",
+    "typ": "50\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a65",
+    "brand": "LG",
+    "title": "LG NanoCell 75\" 4K",
+    "price": 1199.99,
+    "image": "https://images.pexels.com/photos/5721928/pexels-photo-5721928.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg",
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg"
+    ],
+    "shortDesc": "75\" LG NanoCell with AI 4K upscaling",
+    "description": "LG NanoCell 75\" delivers large-screen immersion with accurate colors and AI-enhanced picture quality.",
+    "category": "tv",
+    "typ": "75\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a52",
+    "brand": "TCL",
+    "title": "TCL 4-Series 43\" 4K HDR",
+    "price": 299.99,
+    "image": "https://images.pexels.com/photos/5721907/pexels-photo-5721907.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg",
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg"
+    ],
+    "shortDesc": "43\" TCL 4-Series with 4K HDR",
+    "description": "The TCL 4-Series 43\" offers 4K HDR, built-in streaming apps, and an affordable price point.",
+    "category": "tv",
+    "typ": "43\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a70",
+    "brand": "PHILIPS",
+    "title": "Philips 55\" 4K HDR TV",
+    "price": 579.99,
+    "image": "https://images.pexels.com/photos/5721903/pexels-photo-5721903.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg",
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg",
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg"
+    ],
+    "shortDesc": "55\" Philips 4K HDR Smart TV",
+    "description": "Philips 55\" 4K HDR Smart TV offers sharp visuals, HDR support, and a modern design.",
+    "category": "tv",
+    "typ": "55\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a4f",
+    "brand": "SAMSUNG",
+    "title": "Samsung QLED 65\"",
+    "price": 899.99,
+    "image": "https://images.pexels.com/photos/5721904/pexels-photo-5721904.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg",
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg",
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg"
+    ],
+    "shortDesc": "65\" Samsung QLED with Quantum HDR",
+    "description": "Samsung QLED 65\" delivers bright, vivid images with Quantum HDR and a sleek, bezel-less design.",
+    "category": "tv",
+    "typ": "65\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a50",
+    "brand": "LG",
+    "title": "LG OLED C1 55\"",
+    "price": 1199.99,
+    "image": "https://images.pexels.com/photos/5721905/pexels-photo-5721905.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg",
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg"
+    ],
+    "shortDesc": "55\" LG OLED C1 with perfect blacks",
+    "description": "The LG OLED C1 55\" offers perfect black levels, fast response times, and full support for next-gen gaming features.",
+    "category": "tv",
+    "typ": "55\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a5b",
+    "brand": "LG",
+    "title": "LG OLED G1 65\" Gallery Design",
+    "price": 1799.99,
+    "image": "https://images.pexels.com/photos/5721916/pexels-photo-5721916.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg",
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg"
+    ],
+    "shortDesc": "65\" LG OLED G1 with gallery design",
+    "description": "The LG OLED G1 65\" features a slim gallery design, perfect blacks, and the α9 Gen4 AI processor.",
+    "category": "tv",
+    "typ": "65\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a6e",
+    "brand": "TCL",
+    "title": "TCL 50\" 4K Roku TV",
+    "price": 399.99,
+    "image": "https://images.pexels.com/photos/5721902/pexels-photo-5721902.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg",
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg"
+    ],
+    "shortDesc": "50\" TCL 4K Roku Smart TV",
+    "description": "TCL 50\" 4K Roku TV combines sharp resolution with an easy-to-use Roku interface.",
+    "category": "tv",
+    "typ": "50\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a72",
+    "brand": "LG",
+    "title": "LG 43\" 4K UHD Smart TV",
+    "price": 399.99,
+    "image": "https://images.pexels.com/photos/3046581/pexels-photo-3046581.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg",
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg"
+    ],
+    "shortDesc": "43\" LG 4K UHD Smart TV",
+    "description": "LG 43\" 4K UHD Smart TV offers sharp images, HDR support, and easy access to streaming apps.",
+    "category": "tv",
+    "typ": "43\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a73",
+    "brand": "SONY",
+    "title": "Sony 65\" 4K LED TV",
+    "price": 899.99,
+    "image": "https://images.pexels.com/photos/5721923/pexels-photo-5721923.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg",
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg",
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg"
+    ],
+    "shortDesc": "65\" Sony 4K LED Smart TV",
+    "description": "Sony 65\" 4K LED TV offers detailed images, good motion handling, and smart features.",
+    "category": "tv",
+    "typ": "65\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a74",
+    "brand": "TCL",
+    "title": "TCL 65\" 4K HDR TV",
+    "price": 549.99,
+    "image": "https://images.pexels.com/photos/5721920/pexels-photo-5721920.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg",
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg",
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg"
+    ],
+    "shortDesc": "65\" TCL 4K HDR Smart TV",
+    "description": "TCL 65\" 4K HDR Smart TV offers a large screen, good picture quality, and built-in streaming apps.",
+    "category": "tv",
+    "typ": "65\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a59",
+    "brand": "PHILIPS",
+    "title": "Philips 4K Smart TV 50\"",
+    "price": 529.99,
+    "image": "https://images.pexels.com/photos/5721914/pexels-photo-5721914.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg",
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg"
+    ],
+    "shortDesc": "50\" Philips 4K Smart TV",
+    "description": "Philips 50\" 4K Smart TV offers vivid colors, HDR support, and access to popular streaming apps.",
+    "category": "tv",
+    "typ": "50\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a5c",
+    "brand": "SONY",
+    "title": "Sony X85J 43\"",
+    "price": 449.99,
+    "image": "https://images.pexels.com/photos/5721917/pexels-photo-5721917.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg",
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg",
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg"
+    ],
+    "shortDesc": "43\" Sony X85J with 4K HDR",
+    "description": "Sony X85J 43\" offers smooth motion, 4K HDR, and Google TV for easy access to streaming services.",
+    "category": "tv",
+    "typ": "43\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a56",
+    "brand": "SONY",
+    "title": "Sony X90J 50\" Full Array",
+    "price": 649.99,
+    "image": "https://images.pexels.com/photos/5721911/pexels-photo-5721911.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg",
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg"
+    ],
+    "shortDesc": "50\" Sony X90J with Full Array Local Dimming",
+    "description": "Sony X90J 50\" offers strong contrast, XR processing, and support for Dolby Vision and Dolby Atmos.",
+    "category": "tv",
+    "typ": "50\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a62",
+    "brand": "HISENSE",
+    "title": "Hisense U7G 55\" ULED",
+    "price": 629.99,
+    "image": "https://images.pexels.com/photos/5721925/pexels-photo-5721925.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg",
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg"
+    ],
+    "shortDesc": "55\" Hisense U7G with Quantum ULED",
+    "description": "Hisense U7G 55\" offers Quantum Dot color, 120Hz motion, and excellent gaming performance.",
+    "category": "tv",
+    "typ": "55\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a6c",
+    "brand": "LG",
+    "title": "LG 32\" HD LED TV",
+    "price": 189.99,
+    "image": "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg",
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg",
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg"
+    ],
+    "shortDesc": "32\" LG HD LED TV",
+    "description": "LG 32\" HD LED TV is a simple, reliable option for smaller rooms or secondary spaces.",
+    "category": "tv",
+    "typ": "32\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a71",
+    "brand": "SAMSUNG",
+    "title": "Samsung 65\" Crystal UHD",
+    "price": 749.99,
+    "image": "https://images.pexels.com/photos/5721904/pexels-photo-5721904.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg",
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg",
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg"
+    ],
+    "shortDesc": "65\" Samsung Crystal UHD 4K TV",
+    "description": "Samsung 65\" Crystal UHD offers 4K resolution, HDR, and a slim design for larger living rooms.",
+    "category": "tv",
+    "typ": "65\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a53",
+    "brand": "PANASONIC",
+    "title": "Panasonic 4K HDR 50\"",
+    "price": 469.99,
+    "image": "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg",
+      "https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg",
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg"
+    ],
+    "shortDesc": "50\" Panasonic 4K HDR Smart TV",
+    "description": "Panasonic 50\" 4K HDR TV delivers sharp images, multiple HDMI ports, and Wi-Fi connectivity for streaming.",
+    "category": "tv",
+    "typ": "50\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a6f",
+    "brand": "HISENSE",
+    "title": "Hisense 32\" HD Smart TV",
+    "price": 179.99,
+    "image": "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg",
+      "https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg",
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg"
+    ],
+    "shortDesc": "32\" Hisense HD Smart TV",
+    "description": "Hisense 32\" HD Smart TV is a compact option with built-in apps and good picture quality for its size.",
+    "category": "tv",
+    "typ": "32\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a49",
+    "brand": "SAMSUNG",
+    "title": "Samsung Crystal UHD 43\"",
+    "price": 429.99,
+    "image": "https://images.unsplash.com/photo-1615210230840-69c07c13b4d1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "images": [
+      "https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg",
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg",
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg"
+    ],
+    "shortDesc": "43\" Samsung Crystal UHD Smart TV with HDR10+",
+    "description": "The Samsung Crystal UHD 43\" delivers vibrant colors, HDR10+ support, built-in Wi-Fi, and a slim modern design ideal for any living room.",
+    "category": "tv",
+    "typ": "43\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a4c",
+    "brand": "TCL",
+    "title": "TCL QLED 55\" Google TV",
+    "price": 549.99,
+    "image": "https://images.pexels.com/photos/5721902/pexels-photo-5721902.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg",
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg"
+    ],
+    "shortDesc": "55\" TCL QLED with Google TV and Dolby Vision",
+    "description": "The TCL QLED 55\" features rich colors, Dolby Vision HDR, and Google TV for a full smart entertainment experience.",
+    "category": "tv",
+    "typ": "55\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a5e",
+    "brand": "SAMSUNG",
+    "title": "Samsung Crystal UHD 50\"",
+    "price": 469.99,
+    "image": "https://images.pexels.com/photos/5721921/pexels-photo-5721921.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg",
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg"
+    ],
+    "shortDesc": "50\" Samsung Crystal UHD with HDR10+",
+    "description": "Samsung Crystal UHD 50\" offers sharp 4K resolution, HDR10+ support, and a clean, minimalistic design.",
+    "category": "tv",
+    "typ": "50\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a6a",
+    "brand": "PHILIPS",
+    "title": "Philips 32\" HD Smart TV",
+    "price": 229.99,
+    "image": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg",
+      "https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg",
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg"
+    ],
+    "shortDesc": "32\" Philips HD Smart TV",
+    "description": "Philips 32\" HD Smart TV is perfect for smaller rooms, offering smart features and good picture quality.",
+    "category": "tv",
+    "typ": "32\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a5f",
+    "brand": "LG",
+    "title": "LG UHD 70 Series 55\"",
+    "price": 529.99,
+    "image": "https://images.pexels.com/photos/5721922/pexels-photo-5721922.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg",
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg"
+    ],
+    "shortDesc": "55\" LG UHD with AI upscaling",
+    "description": "LG UHD 70 Series 55\" features AI upscaling, HDR support, and webOS for a smooth smart TV experience.",
+    "category": "tv",
+    "typ": "55\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a67",
+    "brand": "PANASONIC",
+    "title": "Panasonic LED 43\" Smart TV",
+    "price": 379.99,
+    "image": "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg",
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg",
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg"
+    ],
+    "shortDesc": "43\" Panasonic Full HD Smart TV",
+    "description": "Panasonic 43\" LED Smart TV offers Full HD resolution, smart apps, and multiple HDMI ports.",
+    "category": "tv",
+    "typ": "43\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a68",
+    "brand": "TCL",
+    "title": "TCL 3-Series 32\" HD",
+    "price": 199.99,
+    "image": "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg",
+      "https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg",
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg"
+    ],
+    "shortDesc": "32\" TCL HD Smart TV",
+    "description": "The TCL 3-Series 32\" is a compact HD Smart TV ideal for bedrooms, kitchens, or small spaces.",
+    "category": "tv",
+    "typ": "32\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a6b",
+    "brand": "SAMSUNG",
+    "title": "Samsung 85\" QLED 4K",
+    "price": 2499.99,
+    "image": "https://images.pexels.com/photos/5721901/pexels-photo-5721901.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg",
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg",
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg"
+    ],
+    "shortDesc": "85\" Samsung QLED 4K Smart TV",
+    "description": "Samsung 85\" QLED 4K offers a massive screen, Quantum HDR, and premium smart features for home cinema setups.",
+    "category": "tv",
+    "typ": "85\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a4b",
+    "brand": "SONY",
+    "title": "Sony Bravia XR 55\"",
+    "price": 699.99,
+    "image": "https://images.pexels.com/photos/5721900/pexels-photo-5721900.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg",
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg",
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg"
+    ],
+    "shortDesc": "55\" Sony Bravia XR with Cognitive Processor",
+    "description": "Sony Bravia XR 55\" uses a Cognitive Processor XR for lifelike contrast, detailed images, and immersive sound.",
+    "category": "tv",
+    "typ": "55\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a4d",
+    "brand": "HISENSE",
+    "title": "Hisense ULED 65\" 4K",
+    "price": 649.99,
+    "image": "https://images.pexels.com/photos/3046580/pexels-photo-3046580.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg",
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg",
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg"
+    ],
+    "shortDesc": "65\" Hisense ULED with local dimming",
+    "description": "Hisense ULED 65\" offers strong brightness, local dimming, and multiple HDR formats for a cinematic viewing experience.",
+    "category": "tv",
+    "typ": "65\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a5a",
+    "brand": "SAMSUNG",
+    "title": "Samsung Neo QLED 75\"",
+    "price": 1999.99,
+    "image": "https://images.pexels.com/photos/5721915/pexels-photo-5721915.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg",
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg"
+    ],
+    "shortDesc": "75\" Samsung Neo QLED with MiniLED",
+    "description": "Samsung Neo QLED 75\" uses MiniLED backlighting for extreme brightness, deep contrast, and premium HDR performance.",
+    "category": "tv",
+    "typ": "75\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a61",
+    "brand": "PHILIPS",
+    "title": "Philips Ambilight 65\" 4K",
+    "price": 999.99,
+    "image": "https://images.pexels.com/photos/5721924/pexels-photo-5721924.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg",
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg"
+    ],
+    "shortDesc": "65\" Philips Ambilight with immersive lighting",
+    "description": "Philips Ambilight 65\" enhances your viewing experience with ambient lighting that matches on-screen content.",
+    "category": "tv",
+    "typ": "65\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a5d",
+    "brand": "TCL",
+    "title": "TCL 6-Series 55\" QLED",
+    "price": 579.99,
+    "image": "https://images.pexels.com/photos/5721920/pexels-photo-5721920.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg",
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg"
+    ],
+    "shortDesc": "55\" TCL 6-Series QLED with Dolby Vision",
+    "description": "The TCL 6-Series 55\" delivers QLED color, Dolby Vision HDR, and great performance for movies and gaming.",
+    "category": "tv",
+    "typ": "55\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a66",
+    "brand": "SONY",
+    "title": "Sony Bravia X95J 75\"",
+    "price": 2199.99,
+    "image": "https://images.pexels.com/photos/5721929/pexels-photo-5721929.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg",
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg"
+    ],
+    "shortDesc": "75\" Sony X95J with XR Contrast Booster",
+    "description": "Sony X95J 75\" offers exceptional brightness, deep contrast, and premium cinematic performance.",
+    "category": "tv",
+    "typ": "75\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a55",
+    "brand": "LG",
+    "title": "LG QNED 65\" MiniLED",
+    "price": 999.99,
+    "image": "https://images.pexels.com/photos/5721910/pexels-photo-5721910.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg",
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg"
+    ],
+    "shortDesc": "65\" LG QNED with MiniLED backlight",
+    "description": "LG QNED 65\" combines NanoCell and MiniLED technologies for high brightness, deep contrast, and accurate colors.",
+    "category": "tv",
+    "typ": "65\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a60",
+    "brand": "SONY",
+    "title": "Sony Bravia X80J 65\"",
+    "price": 899.99,
+    "image": "https://images.pexels.com/photos/5721923/pexels-photo-5721923.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg",
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg"
+    ],
+    "shortDesc": "65\" Sony Bravia X80J with Triluminos Pro",
+    "description": "Sony X80J 65\" delivers rich colors, smooth motion, and Google TV integration for a premium smart experience.",
+    "category": "tv",
+    "typ": "65\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a69",
+    "brand": "HISENSE",
+    "title": "Hisense H55 55\" 4K",
+    "price": 459.99,
+    "image": "https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg",
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg",
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg"
+    ],
+    "shortDesc": "55\" Hisense 4K Smart TV",
+    "description": "Hisense H55 55\" offers 4K resolution, HDR support, and built-in streaming apps.",
+    "category": "tv",
+    "typ": "55\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a57",
+    "brand": "TCL",
+    "title": "TCL MiniLED 65\" 4K",
+    "price": 799.99,
+    "image": "https://images.pexels.com/photos/5721912/pexels-photo-5721912.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg",
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg"
+    ],
+    "shortDesc": "65\" TCL MiniLED with high brightness",
+    "description": "The TCL MiniLED 65\" delivers excellent brightness, strong contrast, and Google TV for a rich smart TV experience.",
+    "category": "tv",
+    "typ": "65\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a58",
+    "brand": "HISENSE",
+    "title": "Hisense A6G 43\"",
+    "price": 299.99,
+    "image": "https://res.cloudinary.com/dt6wcduvq/image/upload/v1770644572/product_25_3.png",
+    "images": [
+      "https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg",
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg",
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg"
+    ],
+    "shortDesc": "43\" Hisense A6G with 4K and Dolby Vision",
+    "description": "Hisense A6G 43\" offers 4K resolution, Dolby Vision, DTS Virtual:X, and a budget-friendly price.",
+    "category": "tv",
+    "typ": "43\""
+  },
+  {
+    "_id": "6990d85b63b2d9136e810a64",
+    "brand": "SAMSUNG",
+    "title": "Samsung Q60A 43\" QLED",
+    "price": 529.99,
+    "image": "https://images.pexels.com/photos/5721927/pexels-photo-5721927.jpeg",
+    "images": [
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "https://images.pexels.com/photos/279614/pexels-photo-279614.jpeg",
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+      "https://images.pexels.com/photos/704555/pexels-photo-704555.jpeg"
+    ],
+    "shortDesc": "43\" Samsung Q60A QLED with Quantum HDR",
+    "description": "Samsung Q60A 43\" offers vibrant QLED colors, HDR support, and a slim modern design.",
+    "category": "tv",
+    "typ": "43\""
+  }
+]
